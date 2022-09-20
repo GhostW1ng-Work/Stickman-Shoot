@@ -1342,18 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac86a443b52c7bb4fbf9df25c9030917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentWeapon: {fileID: 0}
---- !u!114 &948344223 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3388037942730636477, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-  m_PrefabInstance: {fileID: 6360416469333697942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948344221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817da66060cccbc4b93df899b363651b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _currentWeapon: {fileID: 1280860176}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceCube
       objectReference: {fileID: 0}
+    - target: {fileID: 916048754560946815, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
 --- !u!1 &919132148824314105
@@ -3609,8 +3602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a562490f0ca7da74784e504542a688ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 948344223}
-  _pushPower: 10
+  _player: {fileID: 948344222}
+  _pushPower: 50
 --- !u!33 &1554772337795053016
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3908,7 +3901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _points.Array.data[0]
@@ -3932,7 +3925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308801, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_LocalPosition.x
