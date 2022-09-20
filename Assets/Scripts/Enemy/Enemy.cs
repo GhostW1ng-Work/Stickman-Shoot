@@ -24,6 +24,10 @@ public class Enemy : MonoBehaviour
         _mover = GetComponent<EnemyMover>();
         _rigidbody = GetComponent<Rigidbody>();
     }
+    private void OnEnemyMissed()
+    {
+        _pointer.SetActive(false);
+    }
 
     public void ActivatePointer()
     {
@@ -31,10 +35,6 @@ public class Enemy : MonoBehaviour
             _pointer.SetActive(true);
     }
 
-    private void OnEnemyMissed()
-    {
-        _pointer.SetActive(false);
-    }
     public void PushEnemy(Transform playerPosition, float pushPower)
     {
         _mover.SetIsRunning();
