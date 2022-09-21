@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private PlayerGunner _gunner;
     [SerializeField] private GameObject _pointer;
     [SerializeField] private EnemyPointersHandler _pointersHandler;
+    [SerializeField] private EnemyIceCube _iceCube;
 
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
@@ -24,6 +25,12 @@ public class Enemy : MonoBehaviour
         _mover = GetComponent<EnemyMover>();
         _rigidbody = GetComponent<Rigidbody>();
     }
+
+    private void Update()
+    {
+        _iceCube.transform.localPosition = new Vector3(0, 1, 0);
+    }
+
     private void OnEnemyMissed()
     {
         _pointer.SetActive(false);
@@ -42,9 +49,9 @@ public class Enemy : MonoBehaviour
         _rigidbody.AddForce(currentDirection * pushPower, ForceMode.Impulse);
     }
 
-    public void Freeze(IceCube iceCube)
+    public void Freeze()
     {
-        iceCube.transform.SetParent(transform);
-        iceCube.transform.localPosition = new Vector3(0, 1, 0);
+        _mover.SetIsRunning();
+        _iceCube.gameObject.SetActive(true);
     }
 }
