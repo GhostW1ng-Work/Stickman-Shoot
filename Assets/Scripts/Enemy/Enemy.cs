@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject _pointer;
     [SerializeField] private EnemyPointersHandler _pointersHandler;
     [SerializeField] private EnemyIceCube _iceCube;
+    [SerializeField] private ParticleSystem[] _particles;
 
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
@@ -42,6 +44,12 @@ public class Enemy : MonoBehaviour
     private IEnumerator ActivateTimeToRise()
     {
         yield return new WaitForSeconds(5f);
+
+        foreach (var particle in _particles)
+        {
+            particle.gameObject.SetActive(false);
+        }
+
         _animator.SetBool("isFalling", false);
         _mover.SetIsRunning();
     }
@@ -54,6 +62,11 @@ public class Enemy : MonoBehaviour
 
     public void PushEnemy(Transform playerPosition, float pushPower)
     {
+        foreach (var particle in _particles)
+        {
+            particle.gameObject.SetActive(true);
+        }
+
         _animator.SetBool("isFalling", true);
         _mover.SetIsRunning();
         var currentDirection = transform.position - playerPosition.position;
