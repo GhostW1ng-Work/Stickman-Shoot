@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,6 +10,7 @@ public class Enemy : MonoBehaviour
 
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
+    private Animator _animator;
 
     private void OnEnable()
     {
@@ -24,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         _mover = GetComponent<EnemyMover>();
         _rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,6 +39,13 @@ public class Enemy : MonoBehaviour
         _pointer.SetActive(false);
     }
 
+    private IEnumerator ActivateTimeToRise()
+    {
+        yield return new WaitForSeconds(5f);
+        _animator.SetBool("isFalling", false);
+        _mover.SetIsRunning();
+    }
+
     public void ActivatePointer()
     {
         if (_pointersHandler.PointerIsActive == false)
@@ -44,9 +54,11 @@ public class Enemy : MonoBehaviour
 
     public void PushEnemy(Transform playerPosition, float pushPower)
     {
+        _animator.SetBool("isFalling", true);
         _mover.SetIsRunning();
         var currentDirection = transform.position - playerPosition.position;
         _rigidbody.AddForce(currentDirection * pushPower, ForceMode.Impulse);
+        StartCoroutine(ActivateTimeToRise());
     }
 
     public void Freeze()

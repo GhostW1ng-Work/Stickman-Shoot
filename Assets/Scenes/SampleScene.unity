@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8d053a946217075439d129e79f904e01, type: 2}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _points.Array.data[0]
@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308801, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2441,7 +2441,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a9dbb049c6b2c194cb7eb3f6f8b00f19, type: 2}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275124, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _points.Array.data[0]
@@ -2477,7 +2477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308801, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3539,7 +3539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 948344222}
-  _pushPower: 50
+  _pushPower: 10
   _timeToShutdown: 0.5
 --- !u!1 &1904232885
 GameObject:
@@ -3889,7 +3889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 948344222}
-  _pushPower: 30
+  _pushPower: 10
   _timeToShutdown: 0.5
 --- !u!33 &1554772337795053016
 MeshFilter:
@@ -4148,7 +4148,7 @@ PrefabInstance:
     - target: {fileID: 3388037942740012818, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 4d21e358404ad7240acb55973eb96546, type: 2}
+      objectReference: {fileID: 9100000, guid: d3d4674ddb5a38e42bfdc481576124d3, type: 2}
     - target: {fileID: 6360416467431519726, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: m_Size.x
       value: 0.59331495

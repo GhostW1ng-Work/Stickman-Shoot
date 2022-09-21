@@ -23,6 +23,8 @@ public class EnemyMover : MonoBehaviour
 
     private void Update()
     {
+        _agent.enabled = true;
+
         if (_isRunning == true)
         {
             if (_agent.remainingDistance < _distanceToChangeGoal)
@@ -57,7 +59,7 @@ public class EnemyMover : MonoBehaviour
 
     public void SetIsRunning()
     {
-        _isRunning = false;
-        _animator.SetBool("isRunning", false);
+        _isRunning = !_isRunning;
+        _animator.SetBool("isRunning", _isRunning);
     }
 }
