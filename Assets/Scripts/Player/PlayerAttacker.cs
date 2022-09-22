@@ -10,6 +10,7 @@ public class PlayerAttacker : MonoBehaviour
     private bool _canAttack;
 
     public event UnityAction Attacked;
+    public event UnityAction<Weapon> WeaponPickedUp;
 
     private void Start()
     {
@@ -36,9 +37,11 @@ public class PlayerAttacker : MonoBehaviour
 
     private void SetWeapon(Weapon weapon)
     {
+        _currentWeapon.CloseImage();
         _currentWeapon.gameObject.SetActive(false);
         _currentWeapon = weapon;
         weapon.gameObject.SetActive(true);
+        weapon.ShowImage();
         _canAttack = true;
     }
 
