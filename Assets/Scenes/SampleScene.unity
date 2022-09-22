@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 368335019}
   - component: {fileID: 368335018}
   - component: {fileID: 368335017}
+  - component: {fileID: 368335021}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -335,6 +336,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &368335021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368335016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff0435c6e2c5147ae9a6ae44d2423a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 948344222}
+  _weaponIconPanel: {fileID: 871574589048853129}
 --- !u!1 &368631174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2660,12 +2675,12 @@ GameObject:
   - component: {fileID: 871574589048853140}
   - component: {fileID: 871574589048853143}
   m_Layer: 5
-  m_Name: Item_Epic
+  m_Name: WeaponIconPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &871574589048853140
 CanvasRenderer:
   m_ObjectHideFlags: 0

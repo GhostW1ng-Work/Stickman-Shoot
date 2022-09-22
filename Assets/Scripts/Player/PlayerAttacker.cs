@@ -10,7 +10,7 @@ public class PlayerAttacker : MonoBehaviour
     private bool _canAttack;
 
     public event UnityAction Attacked;
-    public event UnityAction<Weapon> WeaponPickedUp;
+    public event UnityAction WeaponPickedUp;
 
     private void Start()
     {
@@ -31,12 +31,14 @@ public class PlayerAttacker : MonoBehaviour
     {
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
+            
             SetWeapon(weaponBox.Weapon);
         }
     }
 
     private void SetWeapon(Weapon weapon)
     {
+        WeaponPickedUp?.Invoke();
         _currentWeapon.CloseImage();
         _currentWeapon.gameObject.SetActive(false);
         _currentWeapon = weapon;
