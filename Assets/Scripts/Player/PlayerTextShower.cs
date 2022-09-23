@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerTextShower : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
     [SerializeField] private Player _target;
     [SerializeField] private Vector3 _offset;
     [SerializeField] private float _speed;
