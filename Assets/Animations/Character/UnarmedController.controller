@@ -104,6 +104,25 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1107 &-4984980087518406589
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IceCube
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1101 &-1785734243386440372
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -160,7 +179,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SampleAnimationController
+  m_Name: UnarmedController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isRunning
@@ -168,25 +187,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: BaseballAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isFalling
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dance
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -196,6 +215,87 @@ AnimatorController:
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: Baseball
+    m_StateMachine: {fileID: 5275343412690411527}
+    m_Mask: {fileID: 0}
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: 7677443988494155614}
+      m_Motion: {fileID: 7400000, guid: da7a4d8fbc100e546900610a0b0ca3b1, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 5337593585849322783}
+      m_Motion: {fileID: -203655887218126122, guid: c678d290ada49da449a446963d72478c, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 8594909410382017110}
+      m_Motion: {fileID: -203655887218126122, guid: 040db3eedb7bfe54b8aa862d0ee17214, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: -7050912726064568815}
+      m_Motion: {fileID: 7400000, guid: 941163369358b214292eaaf1a6785fba, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102598513768256608}
+      m_Motion: {fileID: 7400000, guid: b909dc80ac451f34288d8aa33f0239f1, type: 2}
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: 0
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: Box
+    m_StateMachine: {fileID: 4278860322067452057}
+    m_Mask: {fileID: 0}
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -7050912726064568815}
+      m_Motion: {fileID: 7400000, guid: f8be37c8030645e408fd3ae4655025b8, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102598513768256608}
+      m_Motion: {fileID: 7400000, guid: cda28521aa19b5a4cbf1ce36906193ef, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8594909410382017110}
+      m_Motion: {fileID: -203655887218126122, guid: 040db3eedb7bfe54b8aa862d0ee17214, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 5337593585849322783}
+      m_Motion: {fileID: -203655887218126122, guid: c678d290ada49da449a446963d72478c, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 7677443988494155614}
+      m_Motion: {fileID: 7400000, guid: da7a4d8fbc100e546900610a0b0ca3b1, type: 2}
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: 0
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: IceCube
+    m_StateMachine: {fileID: -4984980087518406589}
+    m_Mask: {fileID: 0}
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: 8594909410382017110}
+      m_Motion: {fileID: -203655887218126122, guid: 040db3eedb7bfe54b8aa862d0ee17214, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: 7677443988494155614}
+      m_Motion: {fileID: 7400000, guid: da7a4d8fbc100e546900610a0b0ca3b1, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102598513768256608}
+      m_Motion: {fileID: 7400000, guid: 86b0c9a68e1502544a258342f5b0eae7, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -7050912726064568815}
+      m_Motion: {fileID: 7400000, guid: 3284ae02779cad140adca675db2fdd8b, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 5337593585849322783}
+      m_Motion: {fileID: 7400000, guid: 9a1d1ff6b2585c9498bc9580b758210a, type: 2}
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: 0
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
@@ -239,7 +339,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102598513768256608}
-    m_Position: {x: 24, y: 228, z: 0}
+    m_Position: {x: 30, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5337593585849322783}
     m_Position: {x: 290, y: 230, z: 0}
@@ -342,6 +442,25 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1107 &4278860322067452057
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Box
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1101 &4308794231815557840
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -370,6 +489,25 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1107 &5275343412690411527
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Baseball
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1102 &5337593585849322783
 AnimatorState:
   serializedVersion: 6

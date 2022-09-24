@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_RootOrder
@@ -551,6 +551,54 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6661261027050291217, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 399779642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &402996892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402996893}
+  - component: {fileID: 402996894}
+  m_Layer: 0
+  m_Name: Unarmed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402996893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402996892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4828999}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402996894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402996892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d0b1fc3a15ac24988275c4da43b99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 948344222}
+  _weaponImage: {fileID: 1660862305}
+  _pushPower: 0
+  _timeToShutdown: 0
+  _weaponName: Unarmed
 --- !u!1 &423973224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac86a443b52c7bb4fbf9df25c9030917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentWeapon: {fileID: 1868201200}
+  _unarmed: {fileID: 402996894}
+  _currentWeapon: {fileID: 402996894}
 --- !u!114 &948344223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,6 +1318,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyCounter: {fileID: 1436344740}
   _joystick: {fileID: 694366302}
+--- !u!114 &948344224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948344221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab9f9d5bb40f784496e4681b6ce70bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_RootOrder
@@ -2895,6 +2956,7 @@ MonoBehaviour:
   _weaponImage: {fileID: 1794325718}
   _pushPower: 30
   _timeToShutdown: 0.5
+  _weaponName: BoxGloves
 --- !u!1 &1895727634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916048754560946785, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 916048754560946785, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3326,10 +3388,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceCube
       objectReference: {fileID: 0}
+    - target: {fileID: 916048754560946790, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 916048754560946812, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 948344222}
+    - target: {fileID: 916048754560946812, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
+      propertyPath: _weaponName
+      value: IceCube
+      objectReference: {fileID: 0}
     - target: {fileID: 916048754560946812, guid: df6af96ee4cf2cc41a765c5632f953a9, type: 3}
       propertyPath: _weaponImage
       value: 
@@ -3376,6 +3446,7 @@ MonoBehaviour:
   _weaponImage: {fileID: 1359308775}
   _pushPower: 30
   _timeToShutdown: 0.5
+  _weaponName: BaseballBat
 --- !u!33 &1554772337795053016
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4281,6 +4352,10 @@ PrefabInstance:
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_RootOrder
