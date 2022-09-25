@@ -4,25 +4,12 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private PlayerGunner _gunner;
-    [SerializeField] private GameObject _pointer;
-    [SerializeField] private EnemyPointersHandler _pointersHandler;
     [SerializeField] private EnemyIceCube _iceCube;
     [SerializeField] private ParticleSystem[] _particles;
 
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
     private Animator _animator;
-
-    private void OnEnable()
-    {
-        _gunner.EnemyMissed += OnEnemyMissed;
-    }
-
-    private void OnDisable()
-    {
-        _gunner.EnemyMissed -= OnEnemyMissed;
-    }
 
     private void Start()
     {
@@ -36,11 +23,6 @@ public class Enemy : MonoBehaviour
         _iceCube.transform.localPosition = new Vector3(0, 1, 0);
     }
 
-    private void OnEnemyMissed()
-    {
-        _pointer.SetActive(false);
-    }
-
     private IEnumerator ActivateTimeToRise()
     {
         yield return new WaitForSeconds(5f);
@@ -52,12 +34,6 @@ public class Enemy : MonoBehaviour
 
         _animator.SetBool("isFalling", false);
         _mover.SetIsRunning();
-    }
-
-    public void ActivatePointer()
-    {
-        if (_pointersHandler.PointerIsActive == false)
-            _pointer.SetActive(true);
     }
 
     public void PushEnemy(Transform playerPosition, float pushPower)

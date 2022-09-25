@@ -6,6 +6,7 @@ public class PlayerAttacker : MonoBehaviour
 {
     [SerializeField] private Weapon _unarmed;
     [SerializeField] private Weapon _currentWeapon;
+    [SerializeField] private PlayerGunner _gunner;
 
     private PlayerAnimatorSwitcher _switcher;
     private Animator _animator;
@@ -36,7 +37,6 @@ public class PlayerAttacker : MonoBehaviour
     {
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
-            
             SetWeapon(weaponBox.Weapon);
         }
     }
@@ -50,6 +50,10 @@ public class PlayerAttacker : MonoBehaviour
         weapon.ShowImage();
         _canAttack = true;
         WeaponPickedUp?.Invoke();
+
+        if (_currentWeapon.GetComponent<IceCube>())
+            _gunner.enabled = true;
+
     }
 
     private IEnumerator Attack()
@@ -66,5 +70,6 @@ public class PlayerAttacker : MonoBehaviour
         _canAttack = false;
         _currentWeapon = _unarmed;
         _switcher.SetWeaponAnimation(_currentWeapon);
+        _gunner.enabled = false;
     }
 }

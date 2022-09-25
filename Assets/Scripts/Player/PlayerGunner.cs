@@ -14,10 +14,14 @@ public class PlayerGunner : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            Enemy enemy = hit.transform.GetComponent<Enemy>();
-            enemy.ActivatePointer();
-            EnemyHitted?.Invoke();
+            EnemyRaycastChecker _checker = hit.transform.GetComponentInChildren<EnemyRaycastChecker>();
 
+            if (_checker != null)
+            {
+                _checker.ActivatePointer();
+                Debug.Log(_checker.name);
+                EnemyHitted?.Invoke();
+            }
         }
         else
         {
