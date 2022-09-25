@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimatorSwitcher : MonoBehaviour
@@ -23,6 +24,7 @@ public class PlayerAnimatorSwitcher : MonoBehaviour
     {
         _attacker = GetComponent<PlayerAttacker>();
         _animator = GetComponent<Animator>();
+
         _baseLayerIndex = _animator.GetLayerIndex("Base Layer");
         _baseballLayerIndex = _animator.GetLayerIndex("Baseball");
         _boxLayerIndex = _animator.GetLayerIndex("Box");
