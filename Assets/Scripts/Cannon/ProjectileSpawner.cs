@@ -6,6 +6,9 @@ public class ProjectileSpawner : MonoBehaviour
     [SerializeField] private Projectile _projectilePrefab;
     [SerializeField] private Transform _spawnZone;
     [SerializeField] private Transform _direction;
+    [SerializeField] private float _timeForIncrease;
+    [SerializeField] private float _timeToDecrease;
+    [SerializeField] private float _timeForDecrease;
 
     private bool _isSpawned = false;
 
@@ -15,7 +18,7 @@ public class ProjectileSpawner : MonoBehaviour
     {
         _isSpawned = false;
         animator.SetTrigger("isIncreased");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(_timeForIncrease);
 
         if (_isSpawned == false)
         {
@@ -27,9 +30,9 @@ public class ProjectileSpawner : MonoBehaviour
 
     private IEnumerator Wait(Animator animator, GameObject cannon)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(_timeToDecrease);
         animator.SetTrigger("isDecreased");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(_timeForDecrease);
         cannon.SetActive(false);
     }
 

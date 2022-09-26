@@ -38,7 +38,7 @@ public class PlayerAttacker : MonoBehaviour
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
             SetWeapon(weaponBox.Weapon);
-            //Destroy(weaponBox.gameObject);
+            Destroy(weaponBox.gameObject);
         }
     }
 
