@@ -38,6 +38,7 @@ public class PlayerAttacker : MonoBehaviour
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
             SetWeapon(weaponBox.Weapon);
+            Destroy(weaponBox.gameObject);
         }
     }
 
@@ -53,6 +54,8 @@ public class PlayerAttacker : MonoBehaviour
 
         if (_currentWeapon.GetComponent<IceCube>())
             _gunner.enabled = true;
+        else
+            _gunner.enabled = false;
 
     }
 
