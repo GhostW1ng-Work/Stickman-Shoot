@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
+using DG.Tweening;
 
 public class Enemy : MonoBehaviour
 {
@@ -54,5 +54,6 @@ public class Enemy : MonoBehaviour
     {
         _mover.SetIsRunning();
         _iceCube.gameObject.SetActive(true);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 }

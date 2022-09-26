@@ -39,6 +39,7 @@ public class EnemyMover : MonoBehaviour
         }
         else
         {
+            _agent.isStopped = true;
             _agent.enabled = false;
         }
     }
