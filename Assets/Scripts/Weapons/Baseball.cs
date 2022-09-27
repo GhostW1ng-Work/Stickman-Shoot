@@ -1,6 +1,3 @@
-using System.Collections;
-using UnityEngine;
-
 public class Baseball : Weapon
 {
     public override void Attack(Enemy enemy)

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyRaycastChecker : MonoBehaviour
@@ -27,5 +25,10 @@ public class EnemyRaycastChecker : MonoBehaviour
     {
         if (_handler.PointerIsActive == false)
             _pointer.gameObject.SetActive(true);
+    }
+
+    public void DeactivatePointer()
+    {
+        _pointer.gameObject.SetActive(false);
     }
 }

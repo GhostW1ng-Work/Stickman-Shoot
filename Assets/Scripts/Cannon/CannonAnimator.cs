@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator), typeof(ProjectileSpawner))]
 public class CannonAnimator : MonoBehaviour
 {
     private Animator _animator;

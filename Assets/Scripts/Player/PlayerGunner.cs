@@ -19,7 +19,6 @@ public class PlayerGunner : MonoBehaviour
             if (_checker != null)
             {
                 _checker.ActivatePointer();
-                Debug.Log(_checker.name);
                 EnemyHitted?.Invoke();
             }
         }

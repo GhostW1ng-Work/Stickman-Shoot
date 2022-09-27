@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PlayerAnimatorSwitcher), typeof(Animator))]
 public class PlayerAttacker : MonoBehaviour
 {
     [SerializeField] private Weapon _unarmed;
@@ -41,7 +42,7 @@ public class PlayerAttacker : MonoBehaviour
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
             SetWeapon(weaponBox.Weapon);
-            //Destroy(weaponBox.gameObject);
+            Destroy(weaponBox.gameObject);
         }
     }
 

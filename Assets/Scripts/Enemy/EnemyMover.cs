@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private Transform[] _points;

@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyMover), typeof(Rigidbody), typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyIceCube _iceCube;
     [SerializeField] private ParticleSystem[] _particles;
+    [SerializeField] private EnemyRaycastChecker _checker;
+    [SerializeField] private float _timeToActivate;
+    [SerializeField] private float _timeToDefrost;
 
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
@@ -28,7 +32,7 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator ActivateTimeToRise()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(_timeToActivate);
 
         foreach (var particle in _particles)
         {
@@ -37,6 +41,14 @@ public class Enemy : MonoBehaviour
 
         _isAttacked = false;
         _animator.SetBool("isFalling", false);
+        _mover.SetIsRunningTrue();
+    }
+
+    private IEnumerator ActivateTimeToDefrost()
+    {
+        yield return new WaitForSeconds(_timeToDefrost);
+        _isAttacked = false;
+        _iceCube.gameObject.SetActive(false);
         _mover.SetIsRunningTrue();
     }
 
@@ -57,9 +69,11 @@ public class Enemy : MonoBehaviour
 
     public void Freeze()
     {
+        _checker.DeactivatePointer();
         _isAttacked = true;
         _mover.SetIsRunningFalse();
         _iceCube.gameObject.SetActive(true);
         transform.localRotation = Quaternion.Euler(0, 0, 0);
+        StartCoroutine(ActivateTimeToDefrost());
     }
 }
