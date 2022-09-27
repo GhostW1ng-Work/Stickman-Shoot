@@ -5,9 +5,20 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private FloatingJoystick _joystick;
+    [SerializeField] private VictoryPanelShower _victoryPanelShower;
 
     private Rigidbody _rigidbody;
     private Animator _animator;
+
+    private void OnEnable()
+    {
+        _victoryPanelShower.Winned += OnWinned;
+    }
+
+    private void OnDisable()
+    {
+        _victoryPanelShower.Winned -= OnWinned;
+    }
 
     private void Start()
     {
@@ -29,5 +40,10 @@ public class PlayerMover : MonoBehaviour
             _animator.SetBool("isRunning", false);
         }
 
+    }
+
+    private void OnWinned()
+    {
+        _moveSpeed = 0;
     }
 }

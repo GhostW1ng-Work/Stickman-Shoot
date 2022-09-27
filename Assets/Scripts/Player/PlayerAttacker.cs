@@ -28,8 +28,11 @@ public class PlayerAttacker : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Enemy enemy) && _canAttack == true)
         {
-            StartCoroutine(Attack());
-            _currentWeapon.Attack(enemy);
+            if(enemy.IsAttacked == false)
+            {
+                StartCoroutine(Attack());
+                _currentWeapon.Attack(enemy);
+            }
         }
     }
 
@@ -38,7 +41,7 @@ public class PlayerAttacker : MonoBehaviour
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
             SetWeapon(weaponBox.Weapon);
-            Destroy(weaponBox.gameObject);
+            //Destroy(weaponBox.gameObject);
         }
     }
 

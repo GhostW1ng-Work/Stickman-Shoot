@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5388328937901764674
 Transform:
   m_ObjectHideFlags: 0
@@ -223,6 +223,9 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 1994068678}
   _spawnZone: {fileID: 5388328938146826344}
   _direction: {fileID: 5388328937901764674}
+  _timeForIncrease: 0
+  _timeToDecrease: 0
+  _timeForDecrease: 0
 --- !u!1 &5748968179033861362
 GameObject:
   m_ObjectHideFlags: 0

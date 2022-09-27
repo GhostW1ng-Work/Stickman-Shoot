@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VictoryPanelShower : MonoBehaviour
 {
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private GameObject _victoryPanel;
+
+    public event UnityAction Winned;
 
     private void OnEnable()
     {
@@ -19,6 +20,7 @@ public class VictoryPanelShower : MonoBehaviour
 
     private void OnEnemiesPlucked()
     {
+        Winned?.Invoke();
         _victoryPanel.SetActive(true);
     }
 }

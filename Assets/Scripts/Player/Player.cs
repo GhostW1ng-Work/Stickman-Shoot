@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -34,7 +32,6 @@ public class Player : MonoBehaviour
     {
         _joystick.gameObject.SetActive(false);
         _animator.SetBool("Dance", true);
-        _mover.enabled = false;
         _attacker.enabled = false;
     }
 }

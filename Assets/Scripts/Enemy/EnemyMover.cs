@@ -57,9 +57,15 @@ public class EnemyMover : MonoBehaviour
         return desiredRot * _agent.velocity;
     }
 
-    public void SetIsRunning()
+    public void SetIsRunningTrue()
     {
-        _isRunning = !_isRunning;
+        _isRunning = true;
+        _animator.SetBool("isRunning", _isRunning);
+    }
+
+    public void SetIsRunningFalse()
+    {
+        _isRunning = false;
         _animator.SetBool("isRunning", _isRunning);
     }
 }
