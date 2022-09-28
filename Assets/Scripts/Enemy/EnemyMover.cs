@@ -16,8 +16,7 @@ public class EnemyMover : MonoBehaviour
     private void Start()
     {
         _isRunning = true;
-        _index = Random.Range(0, _points.Length);
-        _currentPointIndex = _index;
+        _currentPointIndex = 0;
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
@@ -30,12 +29,12 @@ public class EnemyMover : MonoBehaviour
         {
             if (_agent.remainingDistance < _distanceToChangeGoal)
             {
-                _index = Random.Range(0, _points.Length);
                 _currentPointIndex = _index;
 
                 _agent.SetDestination(_points[_currentPointIndex].position);
                 Rotate();
                 _animator.SetBool("isRunning", true);
+                _index++;
             }
         }
         else
