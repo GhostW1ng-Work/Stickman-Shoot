@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMover), typeof(Rigidbody), typeof(Animator))]
+[RequireComponent(typeof(EnemyMover), typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyIceCube _iceCube;
@@ -9,19 +9,21 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyRaycastChecker _checker;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private float _timeToDefrost;
+    [SerializeField] private Animator _animator;
 
+    private EnemyRagdoll _ragdoll;
     private EnemyMover _mover;
     private Rigidbody _rigidbody;
-    private Animator _animator;
     private bool _isAttacked;
 
     public bool IsAttacked => _isAttacked;
+    public float TimeToActivate => _timeToActivate;
 
     private void Start()
     {
+        _ragdoll = GetComponent<EnemyRagdoll>();
         _mover = GetComponent<EnemyMover>();
         _rigidbody = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
         _isAttacked = false;
     }
 
@@ -40,7 +42,6 @@ public class Enemy : MonoBehaviour
         }
 
         _isAttacked = false;
-        _animator.SetBool("isFalling", false);
         _mover.SetIsRunningTrue();
     }
 
@@ -60,10 +61,8 @@ public class Enemy : MonoBehaviour
         }
 
         _isAttacked = true;
-        _animator.SetBool("isFalling", true);
+        _ragdoll.PushEnemy(playerPosition, pushPower);
         _mover.SetIsRunningFalse();
-        var currentDirection = transform.position - playerPosition.position;
-        _rigidbody.AddForce(currentDirection * pushPower, ForceMode.Impulse);
         StartCoroutine(ActivateTimeToRise());
     }
 

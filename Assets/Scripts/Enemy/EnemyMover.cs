@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private Transform[] _points;
     [SerializeField] private float _distanceToChangeGoal;
+    [SerializeField] private NavMeshAgent _agent;
+    [SerializeField] private Animator _animator;
 
-    private NavMeshAgent _agent;
-    private Animator _animator;
     private int _currentPointIndex;
     private int _index;
     private bool _isRunning;
@@ -17,8 +16,6 @@ public class EnemyMover : MonoBehaviour
     {
         _isRunning = true;
         _currentPointIndex = 0;
-        _agent = GetComponent<NavMeshAgent>();
-        _animator = GetComponent<Animator>();
     }
 
     private void Update()
