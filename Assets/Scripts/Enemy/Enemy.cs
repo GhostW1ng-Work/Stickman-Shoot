@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _timeToActivate;
     [SerializeField] private float _timeToDefrost;
     [SerializeField] private Animator _animator;
+    [SerializeField] private EnemyChecker _parentObject;
 
     private EnemyRagdoll _ragdoll;
     private EnemyMover _mover;
@@ -74,5 +75,10 @@ public class Enemy : MonoBehaviour
         _iceCube.gameObject.SetActive(true);
         transform.localRotation = Quaternion.Euler(0, 0, 0);
         StartCoroutine(ActivateTimeToDefrost());
+    }
+
+    public void DeactivateParentObject()
+    {
+        _parentObject.gameObject.SetActive(false);
     }
 }

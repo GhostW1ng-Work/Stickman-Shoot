@@ -22,8 +22,9 @@ public class EnemyCounter : MonoBehaviour
     {
         if(other.TryGetComponent(out Enemy enemy))
         {
+            Debug.Log("Враг упал");
             _enemyCount++;
-            enemy.gameObject.SetActive(false);
+            enemy.DeactivateParentObject();
         }
     }
 }

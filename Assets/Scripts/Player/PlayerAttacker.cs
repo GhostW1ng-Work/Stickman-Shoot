@@ -25,17 +25,17 @@ public class PlayerAttacker : MonoBehaviour
         _canAttack = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent(out Enemy enemy) && _canAttack == true)
-        {
-            if(enemy.IsAttacked == false)
-            {
-                StartCoroutine(Attack());
-                _currentWeapon.Attack(enemy);
-            }
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.TryGetComponent(out Enemy enemy) && _canAttack == true)
+    //    {
+    //        if(enemy.IsAttacked == false)
+    //        {
+    //            StartCoroutine(Attack());
+    //            _currentWeapon.Attack(enemy);
+    //        }
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -43,6 +43,15 @@ public class PlayerAttacker : MonoBehaviour
         {
             SetWeapon(weaponBox.Weapon);
             Destroy(weaponBox.gameObject);
+        }
+
+        if (other.TryGetComponent(out Enemy enemy) && _canAttack == true)
+        {
+            if (enemy.IsAttacked == false)
+            {
+                StartCoroutine(Attack());
+                _currentWeapon.Attack(enemy);
+            }
         }
     }
 
