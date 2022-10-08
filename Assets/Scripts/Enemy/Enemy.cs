@@ -1,30 +1,30 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(EnemyMover), typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyIceCube _iceCube;
     [SerializeField] private ParticleSystem[] _particles;
-    [SerializeField] private EnemyRaycastChecker _checker;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private float _timeToDefrost;
-    [SerializeField] private Animator _animator;
     [SerializeField] private EnemyChecker _parentObject;
 
     private EnemyRagdoll _ragdoll;
     private EnemyMover _mover;
-    private Rigidbody _rigidbody;
     private bool _isAttacked;
 
     public bool IsAttacked => _isAttacked;
     public float TimeToActivate => _timeToActivate;
+    public float TimeToDefrost => _timeToDefrost;
+
+    public event UnityAction Frozen;
 
     private void Start()
     {
         _ragdoll = GetComponent<EnemyRagdoll>();
         _mover = GetComponent<EnemyMover>();
-        _rigidbody = GetComponent<Rigidbody>();
         _isAttacked = false;
     }
 
@@ -69,12 +69,9 @@ public class Enemy : MonoBehaviour
 
     public void Freeze()
     {
-        _checker.DeactivatePointer();
-        _isAttacked = true;
-        _mover.SetIsRunningFalse();
         _iceCube.gameObject.SetActive(true);
-        transform.localRotation = Quaternion.Euler(0, 0, 0);
-        StartCoroutine(ActivateTimeToDefrost());
+        _iceCube.transform.position = transform.position;
+        _parentObject.gameObject.SetActive(false);
     }
 
     public void DeactivateParentObject()

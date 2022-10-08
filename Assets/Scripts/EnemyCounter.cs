@@ -27,4 +27,14 @@ public class EnemyCounter : MonoBehaviour
             enemy.DeactivateParentObject();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.TryGetComponent(out EnemyIceCube cube))
+        {
+            Debug.Log("Лед упал");
+            _enemyCount++;
+            cube.gameObject.SetActive(false);
+        }
+    }
 }

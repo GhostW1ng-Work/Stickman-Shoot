@@ -46,12 +46,18 @@ public class EnemyRagdoll : MonoBehaviour
         {
             _limbs[i].AddForce(currentDirection * pushPower, ForceMode.Impulse);
         }
-        StartCoroutine(WaitUntilFall());
+        StartCoroutine(WaitUntilFall(_enemy.TimeToActivate));
     }
 
-    private IEnumerator WaitUntilFall()
+    public void Defrost()
     {
-        yield return new WaitForSeconds(_enemy.TimeToActivate);
+        ActivateRagdoll();
+        StartCoroutine(WaitUntilFall(_enemy.TimeToDefrost));
+    }
+
+    private IEnumerator WaitUntilFall(float timeToActivate)
+    {
+        yield return new WaitForSeconds(timeToActivate);
 
         _parentTransform.position = new Vector3(transform.position.x, 0, transform.position.z);
 
