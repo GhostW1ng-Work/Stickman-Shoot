@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyIceCube _iceCube;
     [SerializeField] private ParticleSystem[] _particles;
     [SerializeField] private float _timeToActivate;
-    [SerializeField] private float _timeToDefrost;
     [SerializeField] private EnemyChecker _parentObject;
 
     private EnemyRagdoll _ragdoll;
@@ -17,9 +16,6 @@ public class Enemy : MonoBehaviour
 
     public bool IsAttacked => _isAttacked;
     public float TimeToActivate => _timeToActivate;
-    public float TimeToDefrost => _timeToDefrost;
-
-    public event UnityAction Frozen;
 
     private void Start()
     {
@@ -43,14 +39,6 @@ public class Enemy : MonoBehaviour
         }
 
         _isAttacked = false;
-        _mover.SetIsRunningTrue();
-    }
-
-    private IEnumerator ActivateTimeToDefrost()
-    {
-        yield return new WaitForSeconds(_timeToDefrost);
-        _isAttacked = false;
-        _iceCube.gameObject.SetActive(false);
         _mover.SetIsRunningTrue();
     }
 

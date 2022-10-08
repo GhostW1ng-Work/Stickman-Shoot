@@ -49,12 +49,6 @@ public class EnemyRagdoll : MonoBehaviour
         StartCoroutine(WaitUntilFall(_enemy.TimeToActivate));
     }
 
-    public void Defrost()
-    {
-        ActivateRagdoll();
-        StartCoroutine(WaitUntilFall(_enemy.TimeToDefrost));
-    }
-
     private IEnumerator WaitUntilFall(float timeToActivate)
     {
         yield return new WaitForSeconds(timeToActivate);

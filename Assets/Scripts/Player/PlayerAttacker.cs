@@ -25,18 +25,6 @@ public class PlayerAttacker : MonoBehaviour
         _canAttack = false;
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.TryGetComponent(out Enemy enemy) && _canAttack == true)
-    //    {
-    //        if(enemy.IsAttacked == false)
-    //        {
-    //            StartCoroutine(Attack());
-    //            _currentWeapon.Attack(enemy);
-    //        }
-    //    }
-    //}
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out WeaponBox weaponBox))
