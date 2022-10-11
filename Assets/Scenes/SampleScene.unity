@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -414,6 +414,17 @@ Transform:
   m_Father: {fileID: 1110284011}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134118326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1994068678, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+  m_PrefabInstance: {fileID: 5388328937871716911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ac10319d371d48b12f931ae48ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &135430586
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -871,6 +882,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5246a482a51d54cb4b946af35cc847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &390965918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1994068678, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+  m_PrefabInstance: {fileID: 1262867960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ac10319d371d48b12f931ae48ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &399779642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1191,22 +1213,6 @@ PrefabInstance:
       propertyPath: _speed
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
-      propertyPath: _timeToDecrease
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
-      propertyPath: _timeForDecrease
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
-      propertyPath: _timeForIncrease
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
-      propertyPath: _projectilePrefab
-      value: 
-      objectReference: {fileID: 4865985142017291750, guid: 94def9517c9cba34d8951edb7133f5b6, type: 3}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_1
@@ -1392,8 +1398,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 684355217}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_10
@@ -1500,11 +1510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForDecrease
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -1748,6 +1758,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676384608}
   m_CullTransparentMesh: 1
+--- !u!114 &684355217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1994068678, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+  m_PrefabInstance: {fileID: 517293088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ac10319d371d48b12f931ae48ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &686334473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +1909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -2285,7 +2306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -3435,7 +3456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -3754,6 +3775,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168032204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1994068678, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+  m_PrefabInstance: {fileID: 1735869936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ac10319d371d48b12f931ae48ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1173394529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,6 +3981,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1246208906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1994068678, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+  m_PrefabInstance: {fileID: 1638408830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ac10319d371d48b12f931ae48ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1262867960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3974,8 +4017,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 390965918}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_12
@@ -4415,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -4682,8 +4729,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 1246208906}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_6
@@ -4865,8 +4916,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 1168032204}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_3
@@ -5198,7 +5253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _projectilePrefab
@@ -6600,8 +6655,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: _timeForIncrease
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5388328938146826343, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 134118326}
     - target: {fileID: 5748968179033861362, guid: 533d5a14a5b0fd64b8f9b4e3740ea9ec, type: 3}
       propertyPath: m_Name
       value: Cannon_4

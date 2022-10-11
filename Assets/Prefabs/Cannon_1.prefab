@@ -220,12 +220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b265a006a4968f4c9d1126975a501be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePrefab: {fileID: 1994068678}
+  _projectilePrefab: {fileID: 4865985142017291750, guid: 94def9517c9cba34d8951edb7133f5b6, type: 3}
   _spawnZone: {fileID: 5388328938146826344}
   _direction: {fileID: 5388328937901764674}
-  _timeForIncrease: 0
-  _timeToDecrease: 0
-  _timeForDecrease: 0
+  _timeForIncrease: 0.7
+  _timeToDecrease: 1
+  _timeForDecrease: 0.3
 --- !u!1 &5748968179033861362
 GameObject:
   m_ObjectHideFlags: 0
