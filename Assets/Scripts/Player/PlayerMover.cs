@@ -28,9 +28,31 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
 
-        if(_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        MovementLogic();
+    }
+
+    private void OnWinned()
+    {
+        _moveSpeed = 0;
+    }
+
+    private void MovementLogic()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        float moveVertical = Input.GetAxis("Vertical");
+
+        if (Input.GetMouseButton(0))
+        {
+            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
+        }
+        else
+        {
+            _rigidbody.velocity = new Vector3(moveHorizontal * _moveSpeed, _rigidbody.velocity.y, moveVertical * _moveSpeed);
+        }
+     
+        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0 || moveHorizontal != 0 || moveVertical != 0 )
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
             _animator.SetBool("isRunning", true);
@@ -39,11 +61,6 @@ public class PlayerMover : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);
         }
-
     }
 
-    private void OnWinned()
-    {
-        _moveSpeed = 0;
-    }
 }

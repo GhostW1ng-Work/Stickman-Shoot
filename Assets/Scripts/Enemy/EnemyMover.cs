@@ -15,7 +15,8 @@ public class EnemyMover : MonoBehaviour
     private void Start()
     {
         _isRunning = true;
-        _currentPointIndex = 0;
+        _index = Random.Range(0, _points.Length);
+        _currentPointIndex = _index;
     }
 
     private void Update()
@@ -26,12 +27,12 @@ public class EnemyMover : MonoBehaviour
         {
             if (_agent.remainingDistance < _distanceToChangeGoal)
             {
+                _index = Random.Range(0, _points.Length);
                 _currentPointIndex = _index;
 
                 _agent.SetDestination(_points[_currentPointIndex].position);
                 Rotate();
                 _animator.SetBool("isRunning", true);
-                _index++;
             }
         }
         else
