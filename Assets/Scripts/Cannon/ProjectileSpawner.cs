@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ProjectileSpawner : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class ProjectileSpawner : MonoBehaviour
     private bool _isSpawned = false;
 
     public bool IsSpawned => _isSpawned;
+
+    public event UnityAction AnimationEnded;
 
     private IEnumerator Shoot(Animator animator)
     {
@@ -28,17 +31,17 @@ public class ProjectileSpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator Wait(Animator animator, GameObject cannon)
+    private IEnumerator Wait(Animator animator)
     {
         yield return new WaitForSeconds(_timeToDecrease);
         animator.SetTrigger("isDecreased");
         yield return new WaitForSeconds(_timeForDecrease);
-        cannon.SetActive(false);
+        AnimationEnded?.Invoke();
     }
 
-    public void ActivateCoroutineWait(Animator animator, GameObject cannon)
+    public void ActivateCoroutineWait(Animator animator)
     {
-        StartCoroutine(Wait(animator, cannon));
+        StartCoroutine(Wait(animator));
     }
 
     public void ActivateCoroutineShoot(Animator animator)
