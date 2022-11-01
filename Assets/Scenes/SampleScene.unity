@@ -1869,21 +1869,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 1227083509}
+  _enemyCounter: {fileID: 1436344740}
+  _timeToActivate: 3
   _cannons:
-  - {fileID: 2083363733}
-  - {fileID: 530552390}
-  - {fileID: 1565075478}
-  - {fileID: 1219560252}
-  - {fileID: 699992885}
-  - {fileID: 94533471}
-  - {fileID: 1446268281}
-  - {fileID: 23552780}
-  - {fileID: 245170497}
-  - {fileID: 517293091}
-  - {fileID: 1858281242}
-  - {fileID: 1262867963}
-  - {fileID: 1072217017}
-  - {fileID: 868368816}
+  - {fileID: 2083363732}
+  - {fileID: 530552389}
+  - {fileID: 1565075477}
+  - {fileID: 1219560251}
+  - {fileID: 699992884}
+  - {fileID: 94533470}
+  - {fileID: 1446268280}
+  - {fileID: 23552779}
+  - {fileID: 245170496}
+  - {fileID: 517293090}
+  - {fileID: 1858281241}
+  - {fileID: 1262867962}
+  - {fileID: 1072217016}
+  - {fileID: 868368815}
 --- !u!1 &687178555
 GameObject:
   m_ObjectHideFlags: 0

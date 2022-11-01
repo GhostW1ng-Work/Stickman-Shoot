@@ -11,4 +11,9 @@ public class Timer : MonoBehaviour
         _elapsedTime += Time.deltaTime;
     }
 
+    public void ResetTimer()
+    {
+        _elapsedTime = 0;
+    }
+
 }

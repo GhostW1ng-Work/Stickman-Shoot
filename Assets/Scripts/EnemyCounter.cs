@@ -1,20 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class EnemyCounter : MonoBehaviour
 {
     private int _enemyCount;
+    private EnemyChecker[] _enemies;
 
     public event UnityAction EnemiesPlucked;
 
     private void Start()
     {
-        _enemyCount = 0;  
+        _enemyCount = 0;
+        _enemies = FindObjectsOfType<EnemyChecker>();
     }
 
     private void Update()
     {
-        if (_enemyCount >= 3)
+        if (_enemyCount >= _enemies.Length)
             EnemiesPlucked?.Invoke();
     }
 
@@ -22,7 +25,6 @@ public class EnemyCounter : MonoBehaviour
     {
         if(other.TryGetComponent(out Enemy enemy))
         {
-            Debug.Log("Враг упал");
             _enemyCount++;
             enemy.DeactivateParentObject();
         }
