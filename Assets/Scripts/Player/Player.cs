@@ -6,13 +6,11 @@ public class Player : MonoBehaviour
     [SerializeField] private FloatingJoystick _joystick;
 
     private Animator _animator;
-    private PlayerMover _mover;
     private PlayerAttacker _attacker;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        _mover = GetComponent<PlayerMover>();
         _attacker = GetComponent<PlayerAttacker>();
     }
 

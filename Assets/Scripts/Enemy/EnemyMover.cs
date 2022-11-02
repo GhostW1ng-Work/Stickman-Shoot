@@ -23,22 +23,31 @@ public class EnemyMover : MonoBehaviour
     {
         _agent.enabled = true;
 
-        if (_isRunning == true)
+        if(_points.Length != 0)
         {
-            if (_agent.remainingDistance < _distanceToChangeGoal)
+            if (_isRunning == true)
             {
-                _index = Random.Range(0, _points.Length);
-                _currentPointIndex = _index;
+                if (_agent.remainingDistance < _distanceToChangeGoal)
+                {
+                    _index = Random.Range(0, _points.Length);
+                    _currentPointIndex = _index;
 
-                _agent.SetDestination(_points[_currentPointIndex].position);
-                Rotate();
-                _animator.SetBool("isRunning", true);
+                    _agent.SetDestination(_points[_currentPointIndex].position);
+                    Rotate();
+                    _animator.SetBool("isRunning", true);
+                }
+            }
+            else
+            {
+                _agent.isStopped = true;
+                _agent.enabled = false;
             }
         }
         else
         {
             _agent.isStopped = true;
             _agent.enabled = false;
+            _isRunning = false;
         }
     }
 

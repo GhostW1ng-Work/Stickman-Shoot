@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CannonActivator : MonoBehaviour
 {
+    [SerializeField] private PlayerChecker _playerChecker;
     [SerializeField] private Timer _timer;
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private float _timeToActivate;
@@ -11,12 +12,14 @@ public class CannonActivator : MonoBehaviour
 
     private void OnEnable()
     {
-        _enemyCounter.EnemiesPlucked += OnEnemiesPlucked;
+        _enemyCounter.EnemiesPlucked += DeactivateCannonContainer;
+        _playerChecker.PlayerFalled += DeactivateCannonContainer;
     }
 
     private void OnDisable()
     {
-        _enemyCounter.EnemiesPlucked -= OnEnemiesPlucked;
+        _enemyCounter.EnemiesPlucked -= DeactivateCannonContainer;
+        _playerChecker.PlayerFalled -= DeactivateCannonContainer;
     }
 
     private void Start()
@@ -40,7 +43,7 @@ public class CannonActivator : MonoBehaviour
         }
     }
 
-    private void OnEnemiesPlucked()
+    private void DeactivateCannonContainer()
     {
         gameObject.SetActive(false);
     }

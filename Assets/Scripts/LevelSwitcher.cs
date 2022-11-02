@@ -18,4 +18,9 @@ public class LevelSwitcher : MonoBehaviour
             SceneManager.LoadScene(_levelIndex + 1); 
         }
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
