@@ -8,14 +8,12 @@ public class Player : MonoBehaviour
     private Animator _animator;
     private PlayerMover _mover;
     private PlayerAttacker _attacker;
-    private bool _isVictory;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _mover = GetComponent<PlayerMover>();
         _attacker = GetComponent<PlayerAttacker>();
-        _isVictory = false;
     }
 
     private void OnEnable()

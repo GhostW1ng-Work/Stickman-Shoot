@@ -7,18 +7,15 @@ public class LevelSwitcher : MonoBehaviour
 
     public void NextLevel()
     {
-        _levelIndex = SceneManager.GetActiveScene().buildIndex;
-        if(_levelIndex < SceneManager.sceneCount)
+        if(SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(_levelIndex + 1);
+            _levelIndex = 0;
+            SceneManager.LoadScene(0);
         }
         else
         {
-            _levelIndex = 0;
-            SceneManager.LoadScene(_levelIndex);
+            _levelIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(_levelIndex + 1); 
         }
-        
-
-
     }
 }
