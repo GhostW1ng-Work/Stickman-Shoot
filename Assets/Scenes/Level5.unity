@@ -4309,6 +4309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefeatPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2918918015748330852, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2918918015748330853, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5431,6 +5435,10 @@ PrefabInstance:
     - target: {fileID: 680084459792060148, guid: d6488a778827548459fb63d84593c06e, type: 3}
       propertyPath: m_Name
       value: MoveToStartPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 680084459792060148, guid: d6488a778827548459fb63d84593c06e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 680084459792060149, guid: d6488a778827548459fb63d84593c06e, type: 3}
       propertyPath: m_Pivot.x

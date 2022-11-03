@@ -21,10 +21,11 @@ public class PlayerGunner : MonoBehaviour
                 _checker.ActivatePointer();
                 EnemyHitted?.Invoke();
             }
+            else
+            {
+                EnemyMissed?.Invoke();
+            }
         }
-        else
-        {
-            EnemyMissed?.Invoke();
-        }
+        
     }
 }
