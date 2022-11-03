@@ -7,14 +7,25 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private float _distanceToChangeGoal;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private Animator _animator;
+    [SerializeField] private MoveToStartPanelDisabler _moveToStartPanelDisabler;
 
     private int _currentPointIndex;
     private int _index;
     private bool _isRunning;
 
+    private void OnEnable()
+    {
+        _moveToStartPanelDisabler.AnyKeyPressed += OnAnyKeyPressed;
+    }
+
+    private void OnDisable()
+    {
+        _moveToStartPanelDisabler.AnyKeyPressed -= OnAnyKeyPressed;
+    }
+
     private void Start()
     {
-        _isRunning = true;
+        _isRunning = false;
         _index = Random.Range(0, _points.Length);
         _currentPointIndex = _index;
     }
@@ -62,6 +73,11 @@ public class EnemyMover : MonoBehaviour
             desiredRot.eulerAngles = new Vector3(desiredRot.eulerAngles.x, Mathf.Sign(desiredYAngle) * maxYAngleThisFrame, desiredRot.eulerAngles.z);
         }
         return desiredRot * _agent.velocity;
+    }
+
+    private void OnAnyKeyPressed()
+    {
+        _isRunning = true;
     }
 
     public void SetIsRunningTrue()

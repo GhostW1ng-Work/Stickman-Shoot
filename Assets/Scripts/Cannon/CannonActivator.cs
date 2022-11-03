@@ -3,6 +3,7 @@ using UnityEngine;
 public class CannonActivator : MonoBehaviour
 {
     [SerializeField] private PlayerChecker _playerChecker;
+    [SerializeField] private MoveToStartPanelDisabler _moveToStartPanelDisabler;
     [SerializeField] private Timer _timer;
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private float _timeToActivate;
@@ -14,16 +15,20 @@ public class CannonActivator : MonoBehaviour
     {
         _enemyCounter.EnemiesPlucked += DeactivateCannonContainer;
         _playerChecker.PlayerFalled += DeactivateCannonContainer;
+        _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
     }
 
     private void OnDisable()
     {
         _enemyCounter.EnemiesPlucked -= DeactivateCannonContainer;
         _playerChecker.PlayerFalled -= DeactivateCannonContainer;
+        _moveToStartPanelDisabler.AnyKeyPressed -= ActivateCannonContainer;
     }
 
     private void Start()
     {
+        _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
+        DeactivateCannonContainer();
         _cannonIndex = Random.Range(0, _cannons.Length);
         _cannons[_cannonIndex].gameObject.SetActive(true);
     }
@@ -36,6 +41,11 @@ public class CannonActivator : MonoBehaviour
             _cannons[_cannonIndex].gameObject.SetActive(true);
             _timer.ResetTimer();
         }
+    }
+
+    private void ActivateCannonContainer()
+    {
+        gameObject.SetActive(true);
     }
 
     private void DeactivateCannonContainer()

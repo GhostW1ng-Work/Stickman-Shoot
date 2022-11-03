@@ -8,6 +8,5 @@ public class WeaponBox : MonoBehaviour
     {
         int weaponIndex = Random.Range(0, _weapons.Length);
         return weapon = _weapons[weaponIndex];
-        
     }
 }
