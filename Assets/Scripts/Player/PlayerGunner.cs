@@ -6,6 +6,8 @@ public class PlayerGunner : MonoBehaviour
     public UnityAction EnemyHitted;
     public UnityAction EnemyMissed;
 
+    public static UnityAction OnAnyEnemyMissed;
+
     private void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
@@ -25,7 +27,7 @@ public class PlayerGunner : MonoBehaviour
             {
                 EnemyMissed?.Invoke();
             }
-        }
-        
+            OnAnyEnemyMissed?.Invoke();
+        } 
     }
 }

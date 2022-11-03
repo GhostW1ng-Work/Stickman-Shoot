@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
     public bool IsAttacked => _isAttacked;
     public float TimeToActivate => _timeToActivate;
 
+    public event UnityAction Freezed;
+
     private void Start()
     {
         _ragdoll = GetComponent<EnemyRagdoll>();
@@ -29,9 +31,9 @@ public class Enemy : MonoBehaviour
         _iceCube.transform.localPosition = new Vector3(0, 1, 0);
     }
 
-    private IEnumerator ActivateTimeToRise()
+    private IEnumerator ActivateTimeToRise(float timeToActivate)
     {
-        yield return new WaitForSeconds(_timeToActivate);
+        yield return new WaitForSeconds(timeToActivate);
 
         foreach (var particle in _particles)
         {
@@ -52,11 +54,12 @@ public class Enemy : MonoBehaviour
         _isAttacked = true;
         _ragdoll.PushEnemy(playerPosition, pushPower);
         _mover.SetIsRunningFalse();
-        StartCoroutine(ActivateTimeToRise());
+        StartCoroutine(ActivateTimeToRise(_timeToActivate));
     }
 
     public void Freeze()
     {
+        Freezed?.Invoke();
         _iceCube.gameObject.SetActive(true);
         _iceCube.transform.position = transform.position;
         _parentObject.gameObject.SetActive(false);

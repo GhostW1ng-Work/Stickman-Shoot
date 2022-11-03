@@ -14,12 +14,14 @@ public class EnemyPointersHandler : MonoBehaviour
     {
         _gunner.EnemyHitted += OnEnemyHitted;
         _gunner.EnemyMissed += OnEnemyMissed;
+        PlayerGunner.OnAnyEnemyMissed += OnEnemyMissed;
     }
 
     private void OnDisable()
     {
         _gunner.EnemyHitted -= OnEnemyHitted;
         _gunner.EnemyMissed -= OnEnemyMissed;
+        PlayerGunner.OnAnyEnemyMissed -= OnEnemyMissed;
     }
 
     private void OnEnemyHitted()
