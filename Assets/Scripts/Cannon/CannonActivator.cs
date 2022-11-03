@@ -24,22 +24,17 @@ public class CannonActivator : MonoBehaviour
 
     private void Start()
     {
+        _cannonIndex = Random.Range(0, _cannons.Length);
+        _cannons[_cannonIndex].gameObject.SetActive(true);
     }
 
     private void Update()
     {
-        if(_cannonIndex < _cannons.Length)
+        _cannonIndex = Random.Range(0, _cannons.Length);
+        if (_timer.ElapsedTime >= _timeToActivate)
         {
-            if (_timer.ElapsedTime >= _timeToActivate)
-            {
-                _cannons[_cannonIndex].gameObject.SetActive(true);
-                _cannonIndex++;
-                _timer.ResetTimer();
-            }
-        }
-        else
-        {
-            _cannonIndex = 0;
+            _cannons[_cannonIndex].gameObject.SetActive(true);
+            _timer.ResetTimer();
         }
     }
 
