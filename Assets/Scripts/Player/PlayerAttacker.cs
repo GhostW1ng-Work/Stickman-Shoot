@@ -8,6 +8,7 @@ public class PlayerAttacker : MonoBehaviour
     [SerializeField] private Weapon _unarmed;
     [SerializeField] private Weapon _currentWeapon;
     [SerializeField] private PlayerGunner _gunner;
+    [SerializeField] private VideoAdShower _videoAdShower;
 
     private PlayerAnimatorSwitcher _switcher;
     private Animator _animator;
@@ -18,8 +19,19 @@ public class PlayerAttacker : MonoBehaviour
     public event UnityAction Attacked;
     public event UnityAction WeaponPickedUp;
 
+    private void OnEnable()
+    {
+        _videoAdShower.VideoShowed += SetUnarmed;
+    }
+
+    private void OnDisable()
+    {
+        _videoAdShower.VideoShowed -= SetUnarmed;
+    }
+
     private void Start()
     {
+        _videoAdShower.VideoShowed += SetUnarmed;
         _switcher = GetComponent<PlayerAnimatorSwitcher>();
         _animator = GetComponent<Animator>();
         _canAttack = false;
@@ -71,6 +83,7 @@ public class PlayerAttacker : MonoBehaviour
 
     private void SetUnarmed()
     {
+        _currentWeapon.gameObject.SetActive(false);
         _canAttack = false;
         _currentWeapon = _unarmed;
         _switcher.SetWeaponAnimation(_currentWeapon);
