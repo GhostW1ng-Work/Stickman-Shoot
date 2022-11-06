@@ -11,7 +11,6 @@ public class PlayerMover : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Animator _animator;
-    private Agava.YandexGames.DeviceType _deviceType;
 
     private void OnEnable()
     {
@@ -27,7 +26,6 @@ public class PlayerMover : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
-        _deviceType = Agava.YandexGames.Device.Type;
     }
 
     private void FixedUpdate()
@@ -45,35 +43,6 @@ public class PlayerMover : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         float moveVertical = Input.GetAxis("Vertical");
-
-#if UNITY_WEBGL && !UNITY_EDITOR
-
-        if (_deviceType == Agava.YandexGames.DeviceType.Mobile)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, 0, _joystick.Vertical * _moveSpeed);
-            }
-        }
-
-        else if (Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Desktop)
-        {
-            _rigidbody.velocity = new Vector3(moveHorizontal * _moveSpeed, _rigidbody.velocity.y, moveVertical * _moveSpeed);
-        }
-
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0 || moveHorizontal != 0 || moveVertical != 0)
-        {
-            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
-            _animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            _animator.SetBool("isRunning", false);
-        }
-#endif
-
-
-
 
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0 || moveHorizontal != 0 || moveVertical != 0)
         {
