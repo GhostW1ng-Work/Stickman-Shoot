@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class YandexSDK : MonoBehaviour
 {
-    [SerializeField]
-    private Text _authorizationStatusText;
-
-    [SerializeField]
-    private Text _personalProfileDataPermissionStatusText;
+    [SerializeField] private Text _authorizationStatusText;
+    [SerializeField] private Text _personalProfileDataPermissionStatusText;
+    [SerializeField] private JoystickActivator _joystick;
 
     private void Awake()
     {
@@ -21,6 +19,11 @@ public class YandexSDK : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_WEBGL
         yield return YandexGamesSdk.Initialize();
 
+        if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Desktop)
+        {
+            _joystick.gameObject.SetActive(false);
+        }
+        
         while (true)
         {
             _authorizationStatusText.color = PlayerAccount.IsAuthorized ? Color.green : Color.red;
