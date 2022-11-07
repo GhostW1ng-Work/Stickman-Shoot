@@ -29,7 +29,11 @@ public class YandexSDK : MonoBehaviour
             _authorizationStatusText.color = PlayerAccount.IsAuthorized ? Color.green : Color.red;
 
             if (PlayerAccount.IsAuthorized)
+            {
+               
                 _personalProfileDataPermissionStatusText.color = PlayerAccount.HasPersonalProfileDataPermission ? Color.green : Color.red;
+            }
+
             else
                 _personalProfileDataPermissionStatusText.color = Color.red;
 
@@ -38,6 +42,16 @@ public class YandexSDK : MonoBehaviour
 #else
         yield break;
 #endif
+    }
+
+    public void Authorize()
+    {
+        PlayerAccount.Authorize();
+    }
+
+    public void RequestPersonalProfileDataPermission()
+    {
+        PlayerAccount.RequestPersonalProfileDataPermission();
     }
 }
 

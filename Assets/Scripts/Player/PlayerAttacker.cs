@@ -83,6 +83,7 @@ public class PlayerAttacker : MonoBehaviour
 
     private void SetUnarmed()
     {
+        _currentWeapon.CloseImage();
         _currentWeapon.gameObject.SetActive(false);
         _canAttack = false;
         _currentWeapon = _unarmed;

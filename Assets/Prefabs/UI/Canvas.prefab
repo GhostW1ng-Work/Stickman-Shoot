@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 6033541759788656564}
   - component: {fileID: 6033541759788656567}
   - component: {fileID: 8699710581004152191}
+  - component: {fileID: 7945759787348540869}
+  - component: {fileID: 3684356878040217320}
+  - component: {fileID: 3192638958758784765}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -145,5 +148,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerChecker: {fileID: 0}
+  _videoAdShower: {fileID: 3684356878040217320}
   _defeatPanel: {fileID: 0}
   _weaponPanel: {fileID: 0}
+--- !u!114 &7945759787348540869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc5f7750e42227459c38f9a0f928fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerChecker: {fileID: 0}
+  _enemyCounter: {fileID: 0}
+--- !u!114 &3684356878040217320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e654ccfb5d07a054ebdd581d2dabb5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3192638958758784765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67360ad0cbd4d0a4a9b56f2bcfdaef9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _authorizationStatusText: {fileID: 0}
+  _personalProfileDataPermissionStatusText: {fileID: 0}
+  _joystick: {fileID: 0}

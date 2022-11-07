@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7321552171989296464}
   - component: {fileID: 7321552171989296465}
   - component: {fileID: 7321552171989296470}
+  - component: {fileID: 8986377928482983325}
   m_Layer: 5
   m_Name: JoyStick
   m_TagString: Untagged
@@ -101,6 +102,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8986377928482983325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321552171989296471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61f03fa4d26b47469ba89bc05c506b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoAdShower: {fileID: 0}
 --- !u!1001 &7321552171245126419
 PrefabInstance:
   m_ObjectHideFlags: 0
