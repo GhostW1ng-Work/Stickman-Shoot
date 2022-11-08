@@ -1,26 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 public class ShowInterstistialAfterEndingLevel : MonoBehaviour
 {
-    [SerializeField] private PlayerChecker _playerChecker;
     [SerializeField] private EnemyCounter _enemyCounter;
+    [SerializeField] private float _waitForShowInterstitial;
 
     private void OnEnable()
     {
-        _playerChecker.PlayerFalled += ShowInterstitial;
         _enemyCounter.EnemiesPlucked += ShowInterstitial;
     }
 
     private void OnDisable()
     {
-        _playerChecker.PlayerFalled -= ShowInterstitial;
         _enemyCounter.EnemiesPlucked -= ShowInterstitial;
     }
 
     public void ShowInterstitial()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.InterstitialAd.Show();
+        WaitForShowInterstitial();
 #endif
+    }
+
+    private IEnumerator WaitForShowInterstitial()
+    {
+        yield return new WaitForSeconds(_waitForShowInterstitial);
+        Agava.YandexGames.InterstitialAd.Show();
     }
 }

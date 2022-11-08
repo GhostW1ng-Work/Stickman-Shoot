@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc5f7750e42227459c38f9a0f928fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerChecker: {fileID: 0}
   _enemyCounter: {fileID: 0}
+  _waitForShowInterstitial: 0.5
 --- !u!114 &3684356878040217320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +192,7 @@ MonoBehaviour:
   _authorizationStatusText: {fileID: 0}
   _personalProfileDataPermissionStatusText: {fileID: 0}
   _joystick: {fileID: 0}
+  _desktopMover: {fileID: 0}
+  _mobileMover: {fileID: 0}
+  _virtualCamera: {fileID: 0}
+  _fieldOfViewMobile: 0
