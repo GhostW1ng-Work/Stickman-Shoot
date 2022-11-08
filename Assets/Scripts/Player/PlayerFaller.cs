@@ -6,7 +6,7 @@ public class PlayerFaller : MonoBehaviour
     [SerializeField] private VideoAdShower _videoAdShower;
 
     private Rigidbody _rigidBody;
-    private PlayerMover _playerMover;
+    private MobileMover _playerMover;
     private Animator _animator;
 
     private void OnEnable()
@@ -23,7 +23,7 @@ public class PlayerFaller : MonoBehaviour
     {
         _videoAdShower.VideoShowed += OnVideoShowed;
         _rigidBody = GetComponent<Rigidbody>();
-        _playerMover = GetComponent<PlayerMover>();
+        _playerMover = GetComponent<MobileMover>();
         _animator = GetComponent<Animator>();
     }
 

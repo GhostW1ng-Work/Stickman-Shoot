@@ -1,9 +1,7 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider), typeof(Animator))]
-public class PlayerMover : MonoBehaviour
+public class MobileMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private FloatingJoystick _joystick;

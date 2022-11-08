@@ -788,11 +788,12 @@ GameObject:
   - component: {fileID: 3388037942740012818}
   - component: {fileID: 6360416467431519727}
   - component: {fileID: 6360416467431519726}
-  - component: {fileID: 3388037942730636477}
   - component: {fileID: 948344222}
   - component: {fileID: 948344223}
   - component: {fileID: 948344224}
   - component: {fileID: 964609645}
+  - component: {fileID: 8865039800682636608}
+  - component: {fileID: 5370477981940702854}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -870,21 +871,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.59331495, y: 1.8220929, z: 0.5616609}
   m_Center: {x: -0.0119147, y: 0.91104645, z: 0.00890094}
---- !u!114 &3388037942730636477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388037942730636476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817da66060cccbc4b93df899b363651b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveSpeed: 5
-  _joystick: {fileID: 0}
-  _victoryPanelShower: {fileID: 0}
 --- !u!114 &948344222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,6 +886,7 @@ MonoBehaviour:
   _unarmed: {fileID: 402996894}
   _currentWeapon: {fileID: 402996894}
   _gunner: {fileID: 368631176}
+  _videoAdShower: {fileID: 0}
 --- !u!114 &948344223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,6 +926,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joystick: {fileID: 0}
+  _videoAdShower: {fileID: 0}
+--- !u!114 &8865039800682636608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388037942730636476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6486c83b2e273064eb182a8505523f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
+  _joystick: {fileID: 0}
+  _victoryPanelShower: {fileID: 0}
+--- !u!114 &5370477981940702854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388037942730636476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817da66060cccbc4b93df899b363651b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
+  _joystick: {fileID: 0}
+  _victoryPanelShower: {fileID: 0}
 --- !u!1 &3388037942730636478
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class YandexSDK : MonoBehaviour
     [SerializeField] private Text _authorizationStatusText;
     [SerializeField] private Text _personalProfileDataPermissionStatusText;
     [SerializeField] private JoystickActivator _joystick;
+    [SerializeField] private DesktopMover _desktopMover;
+    [SerializeField] private MobileMover _mobileMover;
 
     private void Awake()
     {
@@ -22,6 +24,11 @@ public class YandexSDK : MonoBehaviour
         if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Desktop)
         {
             _joystick.gameObject.SetActive(false);
+            _mobileMover.enabled = false;
+        }
+        else if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
+        {
+            _desktopMover.enabled = false;
         }
         
         while (true)
