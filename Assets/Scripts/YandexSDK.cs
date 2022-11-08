@@ -2,6 +2,7 @@ using Agava.YandexGames;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class YandexSDK : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class YandexSDK : MonoBehaviour
     [SerializeField] private JoystickActivator _joystick;
     [SerializeField] private DesktopMover _desktopMover;
     [SerializeField] private MobileMover _mobileMover;
+    [SerializeField] private CinemachineVirtualCamera _virtualCamera;
+    [SerializeField] private float _fieldOfViewMobile;
 
     private void Awake()
     {
@@ -23,11 +26,13 @@ public class YandexSDK : MonoBehaviour
 
         if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Desktop)
         {
+            _virtualCamera.m_Lens.FieldOfView = 60;
             _joystick.gameObject.SetActive(false);
             _mobileMover.enabled = false;
         }
         else if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
         {
+            _virtualCamera.m_Lens.FieldOfView = _fieldOfViewMobile;
             _desktopMover.enabled = false;
         }
         
