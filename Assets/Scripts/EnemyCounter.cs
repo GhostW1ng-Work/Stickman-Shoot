@@ -35,6 +35,7 @@ public class EnemyCounter : MonoBehaviour
         {
             _enemyCount++;
             cube.gameObject.SetActive(false);
+            _enemyOnArenaCounter.CheckEnemy(cube.ParentObject);
         }
     }
 }

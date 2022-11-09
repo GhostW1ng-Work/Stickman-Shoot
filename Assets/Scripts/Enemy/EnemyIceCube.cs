@@ -6,6 +6,8 @@ public class EnemyIceCube : MonoBehaviour
     [SerializeField] private EnemyChecker _parentObject;
     [SerializeField] private float _timeToDefrost;
 
+    public EnemyChecker ParentObject => _parentObject;
+
     private void OnEnable()
     {
         StartCoroutine(ActivateDefrost());
