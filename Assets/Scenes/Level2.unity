@@ -2783,6 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerChecker: {fileID: 1868615820}
+  _videoAdShower: {fileID: 1540889814}
   _moveToStartPanelDisabler: {fileID: 5918943149730986144}
   _timer: {fileID: 1227083509}
   _enemyCounter: {fileID: 853916838}

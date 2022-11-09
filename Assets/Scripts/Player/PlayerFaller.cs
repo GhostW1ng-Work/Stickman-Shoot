@@ -6,7 +6,8 @@ public class PlayerFaller : MonoBehaviour
     [SerializeField] private VideoAdShower _videoAdShower;
 
     private Rigidbody _rigidBody;
-    private MobileMover _playerMover;
+    private MobileMover _mobileMover;
+    private DesktopMover _desktopMover;
     private Animator _animator;
 
     private void OnEnable()
@@ -23,7 +24,8 @@ public class PlayerFaller : MonoBehaviour
     {
         _videoAdShower.VideoShowed += OnVideoShowed;
         _rigidBody = GetComponent<Rigidbody>();
-        _playerMover = GetComponent<MobileMover>();
+        _mobileMover = GetComponent<MobileMover>();
+        _desktopMover = GetComponent<DesktopMover>();
         _animator = GetComponent<Animator>();
     }
 
@@ -32,7 +34,8 @@ public class PlayerFaller : MonoBehaviour
         if (collision.transform.TryGetComponent(out Ground ground))
         {
             _rigidBody.constraints = RigidbodyConstraints.None;
-            _playerMover.enabled = false;
+            _mobileMover.enabled = false;
+            _desktopMover.enabled = false;
             _joystick.SetActive(false);
             _animator.SetBool("IsFall", true);
         }
@@ -40,8 +43,18 @@ public class PlayerFaller : MonoBehaviour
 
     private void OnVideoShowed()
     {
+#if !UNITY_EDITOR && UNITY_WEBGL
+     if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Desktop)
+        {
+            _desktopMover.enabled = true;
+        }
+        else if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
+        {
+            _mobileMover.enabled = true;
+        }
+#endif
+        transform.rotation = new Quaternion(0, 0, 0, 0);
         _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
-        _playerMover.enabled = true;
         _animator.SetBool("IsFall", false);
     }
 }

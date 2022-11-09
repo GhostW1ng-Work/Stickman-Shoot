@@ -2476,6 +2476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerChecker: {fileID: 1602300038}
+  _videoAdShower: {fileID: 2066664024}
   _moveToStartPanelDisabler: {fileID: 436837248}
   _timer: {fileID: 1227083509}
   _enemyCounter: {fileID: 1602300039}
@@ -6651,6 +6652,10 @@ PrefabInstance:
       propertyPath: _playerChecker
       value: 
       objectReference: {fileID: 1602300038}
+    - target: {fileID: 7945759787348540869, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _waitForShowInterstitial
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8699710581004152191, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
@@ -7105,6 +7110,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1260875829}
     - target: {fileID: 5370477981940702854, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370477981940702854, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: _victoryPanelShower
       value: 
       objectReference: {fileID: 2066664021}
@@ -7128,7 +7137,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 6360416469333697942}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817da66060cccbc4b93df899b363651b, type: 3}
   m_Name: 

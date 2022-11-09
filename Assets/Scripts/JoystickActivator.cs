@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JoystickActivator : MonoBehaviour
@@ -23,6 +21,11 @@ public class JoystickActivator : MonoBehaviour
 
     private void OnVideoShowed()
     {
-        gameObject.SetActive(true);
+#if !UNITY_EDITOR && UNITY_WEBGL
+ if (Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
+        {
+            gameObject.SetActive(true);
+        }
+#endif
     }
 }

@@ -19,7 +19,7 @@ public class ShowInterstistialAfterEndingLevel : MonoBehaviour
     public void ShowInterstitial()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        WaitForShowInterstitial();
+        StartCoroutine(WaitForShowInterstitial());
 #endif
     }
 

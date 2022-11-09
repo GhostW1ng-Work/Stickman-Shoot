@@ -3,11 +3,13 @@ using UnityEngine;
 public class CannonActivator : MonoBehaviour
 {
     [SerializeField] private PlayerChecker _playerChecker;
+    [SerializeField] private VideoAdShower _videoAdShower;
     [SerializeField] private MoveToStartPanelDisabler _moveToStartPanelDisabler;
     [SerializeField] private Timer _timer;
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private GameObject[] _cannons;
+    
 
     private int _cannonIndex;
 
@@ -16,6 +18,7 @@ public class CannonActivator : MonoBehaviour
         _enemyCounter.EnemiesPlucked += DeactivateCannonContainer;
         _playerChecker.PlayerFalled += DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
+        _videoAdShower.VideoShowed += ActivateCannonContainer;
     }
 
     private void OnDisable()
@@ -23,11 +26,13 @@ public class CannonActivator : MonoBehaviour
         _enemyCounter.EnemiesPlucked -= DeactivateCannonContainer;
         _playerChecker.PlayerFalled -= DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed -= ActivateCannonContainer;
+        _videoAdShower.VideoShowed -= ActivateCannonContainer;
     }
 
     private void Start()
     {
         _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
+        _videoAdShower.VideoShowed += ActivateCannonContainer;
         DeactivateCannonContainer();
         _cannonIndex = Random.Range(0, _cannons.Length);
         _cannons[_cannonIndex].gameObject.SetActive(true);
