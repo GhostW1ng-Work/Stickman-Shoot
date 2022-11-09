@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     public bool IsAttacked => _isAttacked;
     public float TimeToActivate => _timeToActivate;
+    public EnemyChecker ParentObject => _parentObject;
 
     public event UnityAction Freezed;
 

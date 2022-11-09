@@ -1,9 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class EnemyCounter : MonoBehaviour
 {
+    [SerializeField] private EnemyOnArenaCounter _enemyOnArenaCounter;
+
     private int _enemyCount;
     private EnemyChecker[] _enemies;
 
@@ -27,6 +28,7 @@ public class EnemyCounter : MonoBehaviour
         {
             _enemyCount++;
             enemy.DeactivateParentObject();
+            _enemyOnArenaCounter.CheckEnemy(enemy.ParentObject);
         }
 
         if(other.TryGetComponent(out EnemyIceCube cube))
