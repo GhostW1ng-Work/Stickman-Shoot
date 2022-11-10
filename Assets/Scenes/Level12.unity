@@ -2681,7 +2681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &406102649
 Transform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &501744158
 Transform:
   m_ObjectHideFlags: 0
@@ -4089,12 +4089,13 @@ MonoBehaviour:
   _moveToStartPanelDisabler: {fileID: 5918943149730986144}
   _timer: {fileID: 1227083509}
   _enemyCounter: {fileID: 853916838}
-  _timeToActivate: 3
+  _timeToActivate: 10
   _cannons:
   - {fileID: 501744157}
   - {fileID: 1250199599}
   - {fileID: 1649206822}
   - {fileID: 406102648}
+  _isActive: 0
 --- !u!1001 &559707811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4911,6 +4912,7 @@ MonoBehaviour:
   - {fileID: 472695529}
   - {fileID: 746171273}
   - {fileID: 1437906544}
+  _isActive: 1
 --- !u!1 &687178555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8252,7 +8254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1250199600
 Transform:
   m_ObjectHideFlags: 0
@@ -13161,6 +13163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508440674}
   - component: {fileID: 1508440673}
+  - component: {fileID: 1508440675}
   m_Layer: 0
   m_Name: ArenaSwitcher
   m_TagString: Untagged
@@ -13197,6 +13200,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1508440675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508440672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15be8f9e74380614a84af4b88bd1baba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyOnArenaCounter: {fileID: 230214006}
+  _cannonFirstIsland: {fileID: 686334475}
+  _cannonSecondIsland: {fileID: 544363708}
 --- !u!1 &1518497039
 GameObject:
   m_ObjectHideFlags: 0
@@ -14286,7 +14304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1649206823
 Transform:
   m_ObjectHideFlags: 0

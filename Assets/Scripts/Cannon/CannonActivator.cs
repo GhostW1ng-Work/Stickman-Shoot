@@ -9,7 +9,8 @@ public class CannonActivator : MonoBehaviour
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private GameObject[] _cannons;
-    
+    [SerializeField] private bool _isActive;
+
 
     private int _cannonIndex;
 
@@ -34,17 +35,25 @@ public class CannonActivator : MonoBehaviour
         _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
         _videoAdShower.VideoShowed += ActivateCannonContainer;
         DeactivateCannonContainer();
-        _cannonIndex = Random.Range(0, _cannons.Length);
-        _cannons[_cannonIndex].gameObject.SetActive(true);
+
+        if (_isActive)
+        {
+            _cannonIndex = Random.Range(0, _cannons.Length);
+            _cannons[_cannonIndex].gameObject.SetActive(true);
+        }
+
     }
 
     private void Update()
     {
-        _cannonIndex = Random.Range(0, _cannons.Length);
-        if (_timer.ElapsedTime >= _timeToActivate)
+        if (_isActive)
         {
-            _cannons[_cannonIndex].gameObject.SetActive(true);
-            _timer.ResetTimer();
+            _cannonIndex = Random.Range(0, _cannons.Length);
+            if (_timer.ElapsedTime >= _timeToActivate)
+            {
+                _cannons[_cannonIndex].gameObject.SetActive(true);
+                _timer.ResetTimer();
+            }
         }
     }
 
@@ -56,5 +65,10 @@ public class CannonActivator : MonoBehaviour
     private void DeactivateCannonContainer()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetIsActive(bool isActive)
+    {
+        _isActive = isActive;
     }
 }
