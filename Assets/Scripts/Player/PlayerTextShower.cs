@@ -10,11 +10,13 @@ public class PlayerTextShower : MonoBehaviour
     private void OnEnable()
     {
         _playerChecker.PlayerFalled += OnPlayerFalled;
+        PlayerToIslandTeleporter.PlayerTeleported += OnPlayerTeleported;
     }
 
     private void OnDisable()
     {
         _playerChecker.PlayerFalled -= OnPlayerFalled;
+        PlayerToIslandTeleporter.PlayerTeleported -= OnPlayerTeleported;
     }
 
     private void Start()
@@ -30,6 +32,11 @@ public class PlayerTextShower : MonoBehaviour
     private void OnPlayerFalled()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnPlayerTeleported()
+    {
+        transform.position = _target.transform.position + _offset;
     }
 }
  

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerFaller : MonoBehaviour
@@ -8,7 +9,6 @@ public class PlayerFaller : MonoBehaviour
     private Rigidbody _rigidBody;
     private MobileMover _mobileMover;
     private DesktopMover _desktopMover;
-    private Animator _animator;
 
     private void OnEnable()
     {
@@ -26,7 +26,18 @@ public class PlayerFaller : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
         _mobileMover = GetComponent<MobileMover>();
         _desktopMover = GetComponent<DesktopMover>();
-        _animator = GetComponent<Animator>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.TryGetComponent(out Ground ground))
+        {
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+
+            _mobileMover.enabled = true;
+            _desktopMover.enabled = true;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -37,7 +48,6 @@ public class PlayerFaller : MonoBehaviour
             _mobileMover.enabled = false;
             _desktopMover.enabled = false;
             _joystick.SetActive(false);
-            _animator.SetBool("IsFall", true);
         }
     }
 
@@ -55,6 +65,5 @@ public class PlayerFaller : MonoBehaviour
 #endif
         transform.rotation = new Quaternion(0, 0, 0, 0);
         _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
-        _animator.SetBool("IsFall", false);
     }
 }
