@@ -10,13 +10,13 @@ public class PlayerTextShower : MonoBehaviour
     private void OnEnable()
     {
         _playerChecker.PlayerFalled += OnPlayerFalled;
-        PlayerToIslandTeleporter.PlayerTeleported += OnPlayerTeleported;
+        PlayerToIslandTeleporter.TeleportEnded += OnPlayerTeleported;
     }
 
     private void OnDisable()
     {
         _playerChecker.PlayerFalled -= OnPlayerFalled;
-        PlayerToIslandTeleporter.PlayerTeleported -= OnPlayerTeleported;
+        PlayerToIslandTeleporter.TeleportEnded -= OnPlayerTeleported;
     }
 
     private void Start()

@@ -9,7 +9,8 @@ public class VideoAdShower : MonoBehaviour
 
     public void OnShowVideoAd()
     {
-        Agava.YandexGames.VideoAd.Show(null,null,GiveReward);
+        //Agava.YandexGames.VideoAd.Show(null,null,GiveReward);
+        VideoShowed?.Invoke();
     }
 
     private void GiveReward()
