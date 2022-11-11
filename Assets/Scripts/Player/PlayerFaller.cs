@@ -1,10 +1,8 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerFaller : MonoBehaviour
 {
-    [SerializeField] private GameObject _joystick;
     [SerializeField] private VideoAdShower _videoAdShower;
 
     private Rigidbody _rigidBody;
@@ -42,7 +40,6 @@ public class PlayerFaller : MonoBehaviour
         {
             PlayerFalled?.Invoke();
             _rigidBody.constraints = RigidbodyConstraints.None;
-            _joystick.SetActive(false);
         }
     }
 

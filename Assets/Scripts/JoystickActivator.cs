@@ -3,15 +3,18 @@ using UnityEngine;
 public class JoystickActivator : MonoBehaviour
 {
     [SerializeField] private VideoAdShower _videoAdShower;
+    [SerializeField] private PlayerFaller _playerFaller;
 
     private void OnEnable()
     {
         _videoAdShower.VideoShowed += OnVideoShowed;
+        _playerFaller.PlayerFalled += DisableJoystick;
     }
 
     private void OnDisable()
     {
         _videoAdShower.VideoShowed -= OnVideoShowed;
+        _playerFaller.PlayerFalled -= DisableJoystick;
     }
 
     private void Start()
@@ -27,5 +30,10 @@ public class JoystickActivator : MonoBehaviour
             gameObject.SetActive(true);
         }
 #endif
+    }
+
+    private void DisableJoystick()
+    {
+        gameObject.SetActive(false);
     }
 }

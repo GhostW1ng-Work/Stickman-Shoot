@@ -1240,6 +1240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesOnArena:
   - {fileID: 1776350432}
+  - {fileID: 399779643}
+  - {fileID: 8566995513898984656}
 --- !u!1001 &245170494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1909,11 +1911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015389855
+      value: 0.000000015389857
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000007694927
+      value: -0.000000007694929
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4138,7 +4140,7 @@ MonoBehaviour:
   _moveToStartPanelDisabler: {fileID: 5918943149730986144}
   _timer: {fileID: 1227083509}
   _enemyCounter: {fileID: 853916838}
-  _timeToActivate: 10
+  _timeToActivate: 3
   _cannons:
   - {fileID: 501744157}
   - {fileID: 1250199599}
@@ -14213,6 +14215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JoyStick
       objectReference: {fileID: 0}
+    - target: {fileID: 8986377928482983325, guid: 04df40c4d60e1b64f91d10f903c7da01, type: 3}
+      propertyPath: _playerFaller
+      value: 
+      objectReference: {fileID: 1469512908}
     - target: {fileID: 8986377928482983325, guid: 04df40c4d60e1b64f91d10f903c7da01, type: 3}
       propertyPath: _videoAdShower
       value: 

@@ -925,7 +925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024425dbdd812b7448f9455d3fb3a7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joystick: {fileID: 0}
   _videoAdShower: {fileID: 0}
 --- !u!114 &8865039800682636608
 MonoBehaviour:
@@ -939,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6486c83b2e273064eb182a8505523f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 4
   _joystick: {fileID: 0}
   _victoryPanelShower: {fileID: 0}
 --- !u!114 &5370477981940702854
@@ -954,7 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817da66060cccbc4b93df899b363651b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 4
   _joystick: {fileID: 0}
   _victoryPanelShower: {fileID: 0}
 --- !u!1 &3388037942730636478

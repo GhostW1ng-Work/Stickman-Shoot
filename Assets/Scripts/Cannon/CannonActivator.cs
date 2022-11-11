@@ -9,7 +9,7 @@ public class CannonActivator : MonoBehaviour
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private GameObject[] _cannons;
-    [SerializeField] private bool _isActive;
+    [SerializeField] private bool _isActive = true;
 
 
     private int _cannonIndex;
