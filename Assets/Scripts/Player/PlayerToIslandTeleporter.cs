@@ -8,6 +8,7 @@ public class PlayerToIslandTeleporter : MonoBehaviour
     [SerializeField] private Transform _teleportPosition;
     [SerializeField] private ParticleSystem _teleportVFX;
     [SerializeField] private float _timeUntilTeleport;
+    [SerializeField] private float _timeToGiveControl;
 
     private MobileMover _mobileMover;
     private DesktopMover _desktopMover;
@@ -45,5 +46,8 @@ public class PlayerToIslandTeleporter : MonoBehaviour
         yield return new WaitForSeconds(_timeUntilTeleport);
         Instantiate(_teleportVFX, transform.position, Quaternion.Euler(0,1,0));
         PlayerTeleported?.Invoke();
+
+        yield return new WaitForSeconds(_timeToGiveControl);
+        _desktopMover.enabled = true;
     }
 }
