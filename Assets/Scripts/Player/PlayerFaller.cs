@@ -9,6 +9,7 @@ public class PlayerFaller : MonoBehaviour
     private Rigidbody _rigidBody;
     private MobileMover _mobileMover;
     private DesktopMover _desktopMover;
+    private bool _canMove = true;
 
     private void OnEnable()
     {
@@ -35,8 +36,16 @@ public class PlayerFaller : MonoBehaviour
             transform.rotation = new Quaternion(0, 0, 0, 0);
             _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
 
-            _mobileMover.enabled = true;
-            _desktopMover.enabled = true;
+            if (_canMove)
+            {
+                _mobileMover.enabled = true;
+                _desktopMover.enabled = true;
+            }
+            else
+            {
+                _mobileMover.enabled = false;
+                _desktopMover.enabled = false;
+            }
         }
     }
 
