@@ -27,11 +27,11 @@ public class PlayerFaller : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(_isFalling)
         {
-            float amountToMove = Time.fixedDeltaTime * _gravity;
+            float amountToMove = Time.deltaTime * _gravity;
             transform.Translate(Vector3.down * amountToMove);
         }
     }

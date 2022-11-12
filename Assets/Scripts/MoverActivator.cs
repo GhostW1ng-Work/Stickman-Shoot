@@ -14,7 +14,7 @@ public class MoverActivator : MonoBehaviour
         _videoAdShower.VideoShowed += EnableMover;
         _playerFaller.PlayerFalled += DisableMover;
         PlayerToIslandTeleporter.TeleportStarted += DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded += EnableMover;
+        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
     }
 
     private void OnDisable()
@@ -22,7 +22,7 @@ public class MoverActivator : MonoBehaviour
         _videoAdShower.VideoShowed -= EnableMover;
         _playerFaller.PlayerFalled -= DisableMover;
         PlayerToIslandTeleporter.TeleportStarted -= DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded -= EnableMover;
+        PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
     }
 
     private void EnableMover()
