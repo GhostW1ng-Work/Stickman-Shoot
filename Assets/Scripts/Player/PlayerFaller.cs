@@ -4,8 +4,10 @@ using UnityEngine.Events;
 public class PlayerFaller : MonoBehaviour
 {
     [SerializeField] private VideoAdShower _videoAdShower;
+    [SerializeField] private float _gravity;
 
     private Rigidbody _rigidBody;
+    private bool _isFalling;
 
     public event UnityAction PlayerFalled;
 
@@ -25,12 +27,20 @@ public class PlayerFaller : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
     }
 
+    private void FixedUpdate()
+    {
+        if(_isFalling)
+        {
+            float amountToMove = Time.fixedDeltaTime * _gravity;
+            transform.Translate(Vector3.down * amountToMove);
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.TryGetComponent(out Ground ground))
         {
-            transform.rotation = new Quaternion(0, 0, 0, 0);
-            _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+            _isFalling = false;
         }
     }
 
@@ -38,8 +48,8 @@ public class PlayerFaller : MonoBehaviour
     {
         if (collision.transform.TryGetComponent(out Ground ground))
         {
+            _isFalling = true;
             PlayerFalled?.Invoke();
-            _rigidBody.constraints = RigidbodyConstraints.None;
         }
     }
 

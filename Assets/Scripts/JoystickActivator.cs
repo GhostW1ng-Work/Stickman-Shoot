@@ -1,24 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class JoystickActivator : MonoBehaviour
 {
     [SerializeField] private VideoAdShower _videoAdShower;
     [SerializeField] private PlayerFaller _playerFaller;
+    [SerializeField] private FloatingJoystick _joyStick;
 
     private void OnEnable()
     {
         _videoAdShower.VideoShowed += OnVideoShowed;
         _playerFaller.PlayerFalled += DisableJoystick;
+        PlayerToIslandTeleporter.TeleportStarted += DisableJoystick;
+        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
     }
 
     private void OnDisable()
     {
         _videoAdShower.VideoShowed -= OnVideoShowed;
         _playerFaller.PlayerFalled -= DisableJoystick;
+        PlayerToIslandTeleporter.TeleportStarted -= DisableJoystick;
+        PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
     }
 
     private void Start()
     {
+        PlayerToIslandTeleporter.TeleportStarted += DisableJoystick;
+        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
         _videoAdShower.VideoShowed += OnVideoShowed;
     }
 
@@ -27,13 +35,26 @@ public class JoystickActivator : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_WEBGL
  if (Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
         {
-            gameObject.SetActive(true);
+            _joyStick.gameObject.SetActive(true);
         }
+#else
+        _joyStick.gameObject.SetActive(true);
 #endif
     }
 
     private void DisableJoystick()
     {
-        gameObject.SetActive(false);
+        _joyStick.gameObject.SetActive(false);
+    }
+
+    private void OnTeleportEnded()
+    {
+        StartCoroutine(WaitForEnable());
+    }
+
+    private IEnumerator WaitForEnable()
+    {
+        yield return new WaitForSeconds(0.5f);
+        OnVideoShowed();
     }
 }

@@ -685,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208108936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.228, y: 0, z: -4.369}
+  m_LocalPosition: {x: -0.228, y: -0.149, z: -4.369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1220,6 +1220,10 @@ PrefabInstance:
     - target: {fileID: 1641982163, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651408226557434330, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _gunner
@@ -4853,6 +4857,10 @@ PrefabInstance:
       value: JoyStick
       objectReference: {fileID: 0}
     - target: {fileID: 8986377928482983325, guid: 04df40c4d60e1b64f91d10f903c7da01, type: 3}
+      propertyPath: _joyStick
+      value: 
+      objectReference: {fileID: 1388640344}
+    - target: {fileID: 8986377928482983325, guid: 04df40c4d60e1b64f91d10f903c7da01, type: 3}
       propertyPath: _playerFaller
       value: 
       objectReference: {fileID: 6360416469333697945}
@@ -5605,6 +5613,10 @@ PrefabInstance:
       propertyPath: _moveToStartPanelDisabler
       value: 
       objectReference: {fileID: 1790892210}
+    - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6651408226557434330, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _gunner
       value: 
@@ -7539,6 +7551,10 @@ PrefabInstance:
     - target: {fileID: 1641982163, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008046627
+      objectReference: {fileID: 0}
+    - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5547993505195884975, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive

@@ -38,11 +38,8 @@ public class MobileMover : MonoBehaviour
 
     private void MovementLogic()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
 
-        float moveVertical = Input.GetAxis("Vertical");
-
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0 || moveHorizontal != 0 || moveVertical != 0)
+        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
             _animator.SetBool("isRunning", true);
@@ -55,10 +52,6 @@ public class MobileMover : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, 0, _joystick.Vertical * _moveSpeed);
-        }
-        else
-        {
-            _rigidbody.velocity = new Vector3(moveHorizontal * _moveSpeed, _rigidbody.velocity.y, moveVertical * _moveSpeed);
         }
     }
 }

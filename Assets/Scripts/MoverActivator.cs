@@ -14,7 +14,7 @@ public class MoverActivator : MonoBehaviour
         _videoAdShower.VideoShowed += EnableMover;
         _playerFaller.PlayerFalled += DisableMover;
         PlayerToIslandTeleporter.TeleportStarted += DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
+        PlayerToIslandTeleporter.TeleportEnded += EnableMover;
     }
 
     private void OnDisable()
@@ -22,7 +22,7 @@ public class MoverActivator : MonoBehaviour
         _videoAdShower.VideoShowed -= EnableMover;
         _playerFaller.PlayerFalled -= DisableMover;
         PlayerToIslandTeleporter.TeleportStarted -= DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
+        PlayerToIslandTeleporter.TeleportEnded -= EnableMover;
     }
 
     private void EnableMover()
@@ -32,6 +32,7 @@ public class MoverActivator : MonoBehaviour
         {
             _desktopMover.enabled = true;
         }
+
         else if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
         {
             _mobileMover.enabled = true;

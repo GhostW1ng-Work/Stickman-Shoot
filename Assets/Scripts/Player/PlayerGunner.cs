@@ -28,6 +28,6 @@ public class PlayerGunner : MonoBehaviour
                 EnemyMissed?.Invoke();
             }
             OnAnyEnemyMissed?.Invoke();
-        } 
+        }
     }
 }
