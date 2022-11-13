@@ -35,16 +35,16 @@ public class JoystickActivator : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_WEBGL
  if (Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
         {
-            _joyStick.gameObject.SetActive(true);
+            _joyStick.enabled = true;
         }
 #else
-        _joyStick.gameObject.SetActive(true);
+        _joyStick.enabled = true;
 #endif
     }
 
     private void DisableJoystick()
     {
-        _joyStick.gameObject.SetActive(false);
+        _joyStick.enabled = false;
     }
 
     private void OnTeleportEnded()
