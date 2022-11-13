@@ -8,7 +8,7 @@ public class YandexSDK : MonoBehaviour
 {
     [SerializeField] private Text _authorizationStatusText;
     [SerializeField] private Text _personalProfileDataPermissionStatusText;
-    [SerializeField] private JoystickActivator _joystick;
+    [SerializeField] private FloatingJoystick _joystick;
     [SerializeField] private DesktopMover _desktopMover;
     [SerializeField] private MobileMover _mobileMover;
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
