@@ -10,6 +10,7 @@ public class PlayerFaller : MonoBehaviour
     private bool _isFalling;
 
     public event UnityAction PlayerFalled;
+    public event UnityAction PlayerEntered;
 
     private void OnEnable()
     {
@@ -27,12 +28,18 @@ public class PlayerFaller : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(_isFalling)
         {
-            float amountToMove = Time.deltaTime * _gravity;
-            transform.Translate(Vector3.down * amountToMove);
+            //float amountToMove = Time.fixedDeltaTime * _gravity;
+            //transform.Translate(Vector3.down * amountToMove);
+            _rigidBody.constraints = RigidbodyConstraints.None;
+        }
+        else
+        {
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
         }
     }
 
@@ -41,6 +48,7 @@ public class PlayerFaller : MonoBehaviour
         if (collision.transform.TryGetComponent(out Ground ground))
         {
             _isFalling = false;
+            PlayerEntered?.Invoke();
         }
     }
 

@@ -33,7 +33,7 @@ public class PlayerToIslandTeleporter : MonoBehaviour
         TeleportStarted?.Invoke();
 
         Instantiate(_teleportVFX, transform.position, Quaternion.identity);
-        transform.localPosition = _teleportPosition.position;
+        transform.position = _teleportPosition.position;
         yield return new WaitForSeconds(_timeUntilTeleport);
         Instantiate(_teleportVFX, transform.position, Quaternion.Euler(0,1,0));
 

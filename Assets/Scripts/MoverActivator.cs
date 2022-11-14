@@ -7,11 +7,12 @@ public class MoverActivator : MonoBehaviour
     [SerializeField] private MobileMover _mobileMover;
     [SerializeField] private PlayerFaller _playerFaller;
     [SerializeField] private VideoAdShower _videoAdShower;
+    [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private float _timeToGiveControl;
 
     private void OnEnable()
     {
-        _videoAdShower.VideoShowed += EnableMover;
+        _playerFaller.PlayerEntered += EnableMover;
         _playerFaller.PlayerFalled += DisableMover;
         PlayerToIslandTeleporter.TeleportStarted += DisableMover;
         PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
@@ -19,7 +20,7 @@ public class MoverActivator : MonoBehaviour
 
     private void OnDisable()
     {
-        _videoAdShower.VideoShowed -= EnableMover;
+        _playerFaller.PlayerEntered -= EnableMover;
         _playerFaller.PlayerFalled -= DisableMover;
         PlayerToIslandTeleporter.TeleportStarted -= DisableMover;
         PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
