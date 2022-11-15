@@ -31,10 +31,13 @@ public class PlayerFaller : MonoBehaviour
         if(_isFalling)
         {
             _rigidBody.constraints = RigidbodyConstraints.None;
+            _rigidBody.drag = 0;
         }
         else
         {
             _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+            _rigidBody.drag = 10;
+
         }
     }
 
@@ -59,5 +62,6 @@ public class PlayerFaller : MonoBehaviour
     {
         transform.rotation = new Quaternion(0, 0, 0, 0);
         _rigidBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+        _rigidBody.drag = 10;
     }
 }

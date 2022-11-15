@@ -38,8 +38,6 @@ public class MobileMover : MonoBehaviour
 
     private void MovementLogic()
     {
-        
-
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
