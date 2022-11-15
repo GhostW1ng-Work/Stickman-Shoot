@@ -1207,7 +1207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &230214005
 Transform:
   m_ObjectHideFlags: 0
@@ -1239,8 +1239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesOnArena:
   - {fileID: 1776350432}
-  - {fileID: 399779643}
-  - {fileID: 8566995513898984656}
 --- !u!1001 &245170494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1383,7 +1381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246028436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.28, y: 0.17, z: -1.06}
+  m_LocalPosition: {x: 32.28, y: 0.764, z: -1.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1914,11 +1912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015389857
+      value: -0.000000015389855
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007694929
+      value: 0.000000007694927
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3122,7 +3120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &452169535
 Transform:
   m_ObjectHideFlags: 0
@@ -4403,11 +4401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015389857
+      value: -0.000000015389855
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007694929
+      value: 0.000000007694927
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6710,7 +6708,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.44721362, y: 0.000000015389857, z: -0.000000007694929, w: 0.89442724}
+  m_LocalRotation: {x: 0.44721362, y: -0.000000015389855, z: 0.000000007694927, w: 0.89442724}
   m_LocalPosition: {x: 0, y: 20, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8375,7 +8373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258840571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.229, y: 0.17, z: -4.3546314}
+  m_LocalPosition: {x: -0.229, y: -0.007, z: -4.3546314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9172,7 +9170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1468083896
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13608,6 +13606,14 @@ PrefabInstance:
       propertyPath: _victoryPanel
       value: 
       objectReference: {fileID: 302262942}
+    - target: {fileID: 6033541759788656567, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _playerChecker
+      value: 
+      objectReference: {fileID: 1868615820}
+    - target: {fileID: 6033541759788656567, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _videoAdShower
+      value: 
+      objectReference: {fileID: 1540889814}
     - target: {fileID: 7945759787348540869, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
       propertyPath: _enemyCounter
       value: 
@@ -13624,6 +13630,10 @@ PrefabInstance:
       propertyPath: _weaponPanel
       value: 
       objectReference: {fileID: 663949816}
+    - target: {fileID: 8699710581004152191, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _enemyCounter
+      value: 
+      objectReference: {fileID: 853916838}
     - target: {fileID: 8699710581004152191, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
       propertyPath: _playerChecker
       value: 

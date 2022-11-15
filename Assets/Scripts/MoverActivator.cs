@@ -12,18 +12,16 @@ public class MoverActivator : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerFaller.PlayerEntered += EnableMover;
         _playerFaller.PlayerFalled += DisableMover;
-        PlayerToIslandTeleporter.TeleportStarted += DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
+        _videoAdShower.VideoShowed += EnableMover;
+        PlayerToIslandTeleporter.TeleportEnded += EnableMover;
     }
 
     private void OnDisable()
     {
-        _playerFaller.PlayerEntered -= EnableMover;
         _playerFaller.PlayerFalled -= DisableMover;
-        PlayerToIslandTeleporter.TeleportStarted -= DisableMover;
-        PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
+        _videoAdShower.VideoShowed -= EnableMover;
+        PlayerToIslandTeleporter.TeleportEnded -= EnableMover;
     }
 
     private void EnableMover()

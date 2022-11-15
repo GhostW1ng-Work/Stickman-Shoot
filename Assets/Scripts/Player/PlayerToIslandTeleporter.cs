@@ -24,7 +24,7 @@ public class PlayerToIslandTeleporter : MonoBehaviour
     }
 
     private void OnEnemiesOnArenaDied()
-    {
+    {   
         StartCoroutine(TeleportPlayer());
     }
 
@@ -33,9 +33,9 @@ public class PlayerToIslandTeleporter : MonoBehaviour
         TeleportStarted?.Invoke();
 
         Instantiate(_teleportVFX, transform.position, Quaternion.identity);
-        transform.position = _teleportPosition.position;
+        transform.position = _teleportPosition.transform.position;
         yield return new WaitForSeconds(_timeUntilTeleport);
-        Instantiate(_teleportVFX, transform.position, Quaternion.Euler(0,1,0));
+        Instantiate(_teleportVFX, transform.position, Quaternion.Euler(0, 1, 0));
 
         TeleportEnded?.Invoke();
     }

@@ -10,7 +10,7 @@ public class VideoAdShower : MonoBehaviour
     public void OnShowVideoAd()
     {
 #if !UNITY_EDITOR && UNITY_WEBGL
-        Agava.YandexGames.VideoAd.Show(null, null, GiveReward);
+        Agava.YandexGames.VideoAd.Show(null, GiveReward);
 #else
         VideoShowed?.Invoke();
 #endif
