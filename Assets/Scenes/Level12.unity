@@ -1818,7 +1818,7 @@ PrefabInstance:
     - target: {fileID: 7853246121807904317, guid: e047e50aa0a479140ad092f93da4e5be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1657863685}
+      objectReference: {fileID: 427417009}
     - target: {fileID: 7853246121807904317, guid: e047e50aa0a479140ad092f93da4e5be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextLevel
@@ -1914,11 +1914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015389857
+      value: -0.000000015389855
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007694929
+      value: 0.000000007694927
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3045,6 +3045,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
+--- !u!114 &427417009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5814472734625611322, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
+  m_PrefabInstance: {fileID: 427417008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0234f5d524a8b3147a6676df10c7d640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434962519
 GameObject:
   m_ObjectHideFlags: 0
@@ -5485,7 +5496,7 @@ PrefabInstance:
     - target: {fileID: 2918918015838616568, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1657863685}
+      objectReference: {fileID: 427417009}
     - target: {fileID: 2918918015838616568, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartLevel
@@ -14353,17 +14364,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b265a006a4968f4c9d1126975a501be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1657863685 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5814472733337462982, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
-  m_PrefabInstance: {fileID: 427417008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0234f5d524a8b3147a6676df10c7d640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1662562728

@@ -1536,7 +1536,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
 --- !u!114 &230749974 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5814472733337462982, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5814472734625611322, guid: 9203f1f3417d27b439921b17bb67fe85, type: 3}
   m_PrefabInstance: {fileID: 230749973}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7906,7 +7906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388037942730989790, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.149
+      value: -0.134
       objectReference: {fileID: 0}
     - target: {fileID: 3388037942730989790, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: m_LocalPosition.z
