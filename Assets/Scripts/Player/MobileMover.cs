@@ -38,6 +38,7 @@ public class MobileMover : MonoBehaviour
 
     private void MovementLogic()
     {
+        
 
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
@@ -51,7 +52,7 @@ public class MobileMover : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, 0, _joystick.Vertical * _moveSpeed);
+            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
         }
     }
 }
