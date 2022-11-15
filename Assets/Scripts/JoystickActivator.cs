@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class JoystickActivator : MonoBehaviour
 {
@@ -38,16 +39,20 @@ public class JoystickActivator : MonoBehaviour
         }
 #else
         _joyStick.enabled = true;
+        
+
 #endif
     }
 
     private void DisableJoystick()
     {
         _joyStick.enabled = false;
+        _joyStick.OnPointerUp();
     }
 
     private void OnTeleportEnded()
     {
+        _joyStick.OnPointerUp();
         StartCoroutine(WaitForEnable());
     }
 
