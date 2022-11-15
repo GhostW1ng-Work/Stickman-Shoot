@@ -34,6 +34,7 @@ public class MoverActivator : MonoBehaviour
 
         else if(Agava.YandexGames.Device.Type == Agava.YandexGames.DeviceType.Mobile)
         {
+            _desktopMover.enabled = true;
             _mobileMover.enabled = true;
         }
 #else

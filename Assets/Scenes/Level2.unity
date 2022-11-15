@@ -8929,6 +8929,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1511335352440871270}
     - target: {fileID: 8865039800682636608, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865039800682636608, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: _victoryPanelShower
       value: 
       objectReference: {fileID: 1540889813}
