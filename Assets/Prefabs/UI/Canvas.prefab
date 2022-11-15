@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 6033541759788656560}
   - component: {fileID: 6033541759788656564}
   - component: {fileID: 6033541759788656567}
-  - component: {fileID: 8699710581004152191}
   - component: {fileID: 7945759787348540869}
   - component: {fileID: 3684356878040217320}
   - component: {fileID: 3192638958758784765}
+  - component: {fileID: 5139589209459217381}
+  - component: {fileID: 5843122141980756637}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -133,24 +134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyCounter: {fileID: 0}
+  _playerChecker: {fileID: 0}
+  _videoAdShower: {fileID: 0}
   _victoryPanel: {fileID: 0}
   _waitForActivate: 1
---- !u!114 &8699710581004152191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6033541759788656561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d13b3bb241e694c80f6d2f89763842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerChecker: {fileID: 0}
-  _videoAdShower: {fileID: 3684356878040217320}
-  _defeatPanel: {fileID: 0}
-  _weaponPanel: {fileID: 0}
 --- !u!114 &7945759787348540869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,3 +183,35 @@ MonoBehaviour:
   _mobileMover: {fileID: 0}
   _virtualCamera: {fileID: 0}
   _fieldOfViewMobile: 0
+--- !u!114 &5139589209459217381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61f03fa4d26b47469ba89bc05c506b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoAdShower: {fileID: 3684356878040217320}
+  _playerFaller: {fileID: 0}
+  _joyStick: {fileID: 0}
+--- !u!114 &5843122141980756637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d13b3bb241e694c80f6d2f89763842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerChecker: {fileID: 0}
+  _videoAdShower: {fileID: 3684356878040217320}
+  _enemyCounter: {fileID: 0}
+  _defeatPanel: {fileID: 0}
+  _weaponPanel: {fileID: 0}

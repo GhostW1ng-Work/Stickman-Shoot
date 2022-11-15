@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class PlayerFaller : MonoBehaviour
 {
     [SerializeField] private VideoAdShower _videoAdShower;
-    [SerializeField] private float _gravity;
 
     private Rigidbody _rigidBody;
     private bool _isFalling;
@@ -43,7 +42,6 @@ public class PlayerFaller : MonoBehaviour
     {
         if (collision.transform.TryGetComponent(out Ground ground))
         {
-            Debug.Log("ÂÑÒÀË");
             _isFalling = false;
         }
     }

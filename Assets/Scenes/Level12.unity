@@ -1239,6 +1239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesOnArena:
   - {fileID: 1776350432}
+  - {fileID: 399779643}
+  - {fileID: 8566995513898984656}
 --- !u!1001 &245170494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1912,11 +1914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015389855
+      value: 0.000000015389857
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000007694927
+      value: -0.000000007694929
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13498,6 +13500,30 @@ PrefabInstance:
       propertyPath: _personalProfileDataPermissionStatusText
       value: 
       objectReference: {fileID: 2138781956}
+    - target: {fileID: 5139589209459217381, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _joyStick
+      value: 
+      objectReference: {fileID: 1511335352440871270}
+    - target: {fileID: 5139589209459217381, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _playerFaller
+      value: 
+      objectReference: {fileID: 1469512908}
+    - target: {fileID: 5843122141980756637, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _defeatPanel
+      value: 
+      objectReference: {fileID: 752976234}
+    - target: {fileID: 5843122141980756637, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _weaponPanel
+      value: 
+      objectReference: {fileID: 663949816}
+    - target: {fileID: 5843122141980756637, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _enemyCounter
+      value: 
+      objectReference: {fileID: 853916838}
+    - target: {fileID: 5843122141980756637, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _playerChecker
+      value: 
+      objectReference: {fileID: 1868615820}
     - target: {fileID: 6033541759788656561, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -13650,7 +13676,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6033541759788656567, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
   m_PrefabInstance: {fileID: 1540889811}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939178964}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148597ca18ec9ee488553b84c9bdb2fd, type: 3}
@@ -13661,7 +13687,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3684356878040217320, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
   m_PrefabInstance: {fileID: 1540889811}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939178964}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e654ccfb5d07a054ebdd581d2dabb5ce, type: 3}
@@ -13672,7 +13698,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3192638958758784765, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
   m_PrefabInstance: {fileID: 1540889811}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939178964}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67360ad0cbd4d0a4a9b56f2bcfdaef9a, type: 3}
@@ -15698,26 +15724,6 @@ Transform:
   m_Father: {fileID: 1350421304}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1939178964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6033541759788656561, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
-  m_PrefabInstance: {fileID: 1540889811}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1939178971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939178964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a61f03fa4d26b47469ba89bc05c506b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _videoAdShower: {fileID: 1540889814}
-  _playerFaller: {fileID: 1469512908}
-  _joyStick: {fileID: 1511335352440871270}
 --- !u!43 &1946098128
 Mesh:
   m_ObjectHideFlags: 0
@@ -17661,26 +17667,6 @@ PrefabInstance:
       propertyPath: _victoryPanelShower
       value: 
       objectReference: {fileID: 1540889813}
-    - target: {fileID: 6360416467431519726, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8323096
-      objectReference: {fileID: 0}
-    - target: {fileID: 6360416467431519726, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-      propertyPath: m_Center.y
-      value: 0.9059381
-      objectReference: {fileID: 0}
-    - target: {fileID: 6360416467431519727, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6360416467431519727, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6360416467431519727, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6360416468331758983, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
       propertyPath: _weaponImage
       value: 
