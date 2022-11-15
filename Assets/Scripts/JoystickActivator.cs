@@ -24,12 +24,6 @@ public class JoystickActivator : MonoBehaviour
         PlayerToIslandTeleporter.TeleportEnded -= OnTeleportEnded;
     }
 
-    private void Start()
-    {
-        PlayerToIslandTeleporter.TeleportStarted += DisableJoystick;
-        PlayerToIslandTeleporter.TeleportEnded += OnTeleportEnded;
-    }
-
     private void OnVideoShowed()
     {
 #if !UNITY_EDITOR && UNITY_WEBGL
