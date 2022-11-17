@@ -1,13 +1,10 @@
 using Agava.YandexGames;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using Cinemachine;
 
 public class YandexSDK : MonoBehaviour
 {
-    [SerializeField] private Text _authorizationStatusText;
-    [SerializeField] private Text _personalProfileDataPermissionStatusText;
     [SerializeField] private FloatingJoystick _joystick;
     [SerializeField] private DesktopMover _desktopMover;
     [SerializeField] private MobileMover _mobileMover;
@@ -34,22 +31,6 @@ public class YandexSDK : MonoBehaviour
         {
             _virtualCamera.m_Lens.FieldOfView = _fieldOfViewMobile;
             _desktopMover.enabled = false;
-        }
-        
-        while (true)
-        {
-            _authorizationStatusText.color = PlayerAccount.IsAuthorized ? Color.green : Color.red;
-
-            if (PlayerAccount.IsAuthorized)
-            {
-               
-                _personalProfileDataPermissionStatusText.color = PlayerAccount.HasPersonalProfileDataPermission ? Color.green : Color.red;
-            }
-
-            else
-                _personalProfileDataPermissionStatusText.color = Color.red;
-
-            yield return new WaitForSecondsRealtime(0.25f);
         }
 #else
         yield break;
