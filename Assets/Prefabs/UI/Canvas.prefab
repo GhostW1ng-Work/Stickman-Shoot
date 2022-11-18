@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3192638958758784765}
   - component: {fileID: 5139589209459217381}
   - component: {fileID: 5843122141980756637}
+  - component: {fileID: 439146076724748965}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -176,8 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67360ad0cbd4d0a4a9b56f2bcfdaef9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _authorizationStatusText: {fileID: 0}
-  _personalProfileDataPermissionStatusText: {fileID: 0}
   _joystick: {fileID: 0}
   _desktopMover: {fileID: 0}
   _mobileMover: {fileID: 0}
@@ -215,3 +214,16 @@ MonoBehaviour:
   _enemyCounter: {fileID: 0}
   _defeatPanel: {fileID: 0}
   _weaponPanel: {fileID: 0}
+--- !u!114 &439146076724748965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033541759788656561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04bc30c03389ad49976b72b5fbc8c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelCounterText: {fileID: 0}

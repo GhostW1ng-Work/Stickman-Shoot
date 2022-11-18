@@ -7,15 +7,17 @@ public class LevelSwitcher : MonoBehaviour
     private int _levelIndex = 0;
     private static bool _isLoaded = false;
 
-    private void Start()
-    {
-        if (!_isLoaded)
-        {
-            _isLoaded = true;
-            _levelIndex = PlayerPrefs.GetInt("CurrentLevel", _defaultLevel);
-            SceneManager.LoadScene(_levelIndex);
-        }
-    }
+    public int LevelIndex => _levelIndex;
+
+    //private void Start()
+    //{
+    //    if (!_isLoaded)
+    //    {
+    //        _isLoaded = true;
+    //        _levelIndex = PlayerPrefs.GetInt("CurrentLevel", _defaultLevel);
+    //        SceneManager.LoadScene(_levelIndex);
+    //    }
+    //}
 
     private void Update()
     {
