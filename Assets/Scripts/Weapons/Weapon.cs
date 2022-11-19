@@ -6,6 +6,7 @@ public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] protected PlayerAttacker _player;
     [SerializeField] protected Image _weaponImage;
+    [SerializeField] protected AudioSource _punchAudio;
     [SerializeField] protected float _pushPower;
     [SerializeField] protected float _timeToShutdown;
     [SerializeField] protected string _weaponName;
@@ -24,6 +25,7 @@ public abstract class Weapon : MonoBehaviour
 
     private void OnAttacked()
     {
+        _punchAudio.Play();
         StartCoroutine(WeaponSetActive());
     }
 
