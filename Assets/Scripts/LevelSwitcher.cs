@@ -9,25 +9,13 @@ public class LevelSwitcher : MonoBehaviour
 
     public int LevelIndex => _levelIndex;
 
-    //private void Start()
-    //{
-    //    if (!_isLoaded)
-    //    {
-    //        _isLoaded = true;
-    //        _levelIndex = PlayerPrefs.GetInt("CurrentLevel", _defaultLevel);
-    //        SceneManager.LoadScene(_levelIndex);
-    //    }
-    //}
-
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (!_isLoaded)
         {
-            _levelIndex = _defaultLevel;
-            PlayerPrefs.SetInt("CurrentLevel", _levelIndex);
+            _isLoaded = true;
+            _levelIndex = PlayerPrefs.GetInt("CurrentLevel", _defaultLevel);
             SceneManager.LoadScene(_levelIndex);
-            PlayerPrefs.Save();
-
         }
     }
 
