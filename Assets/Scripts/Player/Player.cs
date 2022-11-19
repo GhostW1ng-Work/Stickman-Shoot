@@ -4,9 +4,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private EnemyCounter _enemyCounter;
     [SerializeField] private FloatingJoystick _joystick;
+    [SerializeField] private AudioSource _winSound;
 
     private Animator _animator;
     private PlayerAttacker _attacker;
+    private bool _isWin = false;
 
     private void Start()
     {
@@ -26,8 +28,13 @@ public class Player : MonoBehaviour
 
     private void OnEnemiesPlucked()
     {
-        _joystick.gameObject.SetActive(false);
-        _animator.SetBool("Dance", true);
-        _attacker.enabled = false;
+        if (!_isWin)
+        {
+            _isWin = true;
+            _winSound.PlayOneShot(_winSound.clip);
+            _joystick.gameObject.SetActive(false);
+            _animator.SetBool("Dance", true);
+            _attacker.enabled = false;
+        }
     }
 }

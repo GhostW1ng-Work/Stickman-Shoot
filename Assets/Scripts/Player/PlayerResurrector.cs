@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerResurrector : MonoBehaviour
 {
     [SerializeField] private VideoAdShower _videoAdShower;
+    [SerializeField] private AudioSource _ressurectSound;
     [SerializeField] private Player _player;
     [SerializeField] private List<Transform> _spawnPointsTransform;
 
@@ -28,6 +29,7 @@ public class PlayerResurrector : MonoBehaviour
 
     private void OnVideoAdShowed()
     {
+        _ressurectSound.Play();
         _player.gameObject.SetActive(true);
         _player.transform.position = _currentSpawnPosition.position;
     }

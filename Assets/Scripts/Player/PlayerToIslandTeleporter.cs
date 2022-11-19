@@ -7,6 +7,7 @@ public class PlayerToIslandTeleporter : MonoBehaviour
     [SerializeField] private EnemyOnArenaCounter _enemyOnArenaCounter;
     [SerializeField] private Transform _teleportPosition;
     [SerializeField] private ParticleSystem _teleportVFX;
+    [SerializeField] private AudioSource _teleportSound;
     [SerializeField] private float _timeUntilTeleport;
     [SerializeField] private float _timeToGiveControl;
 
@@ -33,6 +34,7 @@ public class PlayerToIslandTeleporter : MonoBehaviour
         TeleportStarted?.Invoke();
 
         Instantiate(_teleportVFX, transform.position, Quaternion.identity);
+        _teleportSound.Play();
         transform.position = _teleportPosition.transform.position;
         yield return new WaitForSeconds(_timeUntilTeleport);
         Instantiate(_teleportVFX, transform.position, Quaternion.Euler(0, 1, 0));

@@ -9,6 +9,7 @@ public class PlayerAttacker : MonoBehaviour
     [SerializeField] private Weapon _currentWeapon;
     [SerializeField] private PlayerGunner _gunner;
     [SerializeField] private VideoAdShower _videoAdShower;
+    [SerializeField] private AudioSource _pickUpWeaponSound;
 
     private PlayerAnimatorSwitcher _switcher;
     private Animator _animator;
@@ -41,6 +42,7 @@ public class PlayerAttacker : MonoBehaviour
     {
         if(other.TryGetComponent(out WeaponBox weaponBox))
         {
+            _pickUpWeaponSound.Play();
             SetWeapon(weaponBox.GetWeapon(_currentWeapon));
             Destroy(weaponBox.gameObject);
         }
