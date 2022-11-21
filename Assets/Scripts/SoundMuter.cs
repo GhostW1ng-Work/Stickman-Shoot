@@ -8,7 +8,7 @@ public class SoundMuter : MonoBehaviour
 
     private Image _currentImage;
     private Button _button;
-    private bool _isAudioOn;
+    private int _isAudioOnInt;
 
     private void Awake()
     {
@@ -27,40 +27,43 @@ public class SoundMuter : MonoBehaviour
 
     private void Start()
     {
-        
         _currentImage = GetComponent<Image>();
 
-        if (!_isAudioOn)
+        if (PlayerPrefs.GetInt("IsSoundOn", _isAudioOnInt) == 0)
         {
-            _currentImage.sprite = _audioOff;
+            MuteAudio();
         }
-        else
+        else if(PlayerPrefs.GetInt("IsSoundOn", _isAudioOnInt) == 1)
         {
-            _currentImage.sprite = _audioOn;
+            UnmuteAudio();
         }
     }
 
     private void MuteAudio()
     {
-        _isAudioOn = false;
+        _isAudioOnInt = 0;
         _currentImage.sprite = _audioOff;
         AudioListener.volume = 0;
+        PlayerPrefs.SetInt("IsSoundOn", _isAudioOnInt);
+        PlayerPrefs.Save();
     }
 
     private void UnmuteAudio()
     {
-        _isAudioOn = true;
+        _isAudioOnInt = 1;
         _currentImage.sprite = _audioOn;
         AudioListener.volume = 1;
+        PlayerPrefs.SetInt("IsSoundOn", _isAudioOnInt);
+        PlayerPrefs.Save();
     }
 
     public void TryMuteAudio()
     {
-        if (_isAudioOn)
+        if (_isAudioOnInt == 1)
         {
             MuteAudio();
         }
-        else
+        else if(_isAudioOnInt == 0)
         {
             UnmuteAudio();
         }

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
   _speed: 6
-  _pushPower: 300
+  _pushPower: 200
   _timeUntilDestroy: 1.5
   _particleOffset: {x: 0, y: 1, z: 0}
   _explosionEffect: {fileID: 3021918606209259773, guid: a2f56d2ff5087694fa4d5aadddccb500, type: 3}
