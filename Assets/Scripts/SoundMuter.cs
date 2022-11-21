@@ -8,7 +8,7 @@ public class SoundMuter : MonoBehaviour
 
     private Image _currentImage;
     private Button _button;
-    private bool _isAudioOn = false;
+    private bool _isAudioOn;
 
     private void Awake()
     {

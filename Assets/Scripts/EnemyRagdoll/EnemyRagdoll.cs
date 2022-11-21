@@ -37,9 +37,9 @@ public class EnemyRagdoll : MonoBehaviour
         }
     }
 
-    public void PushEnemy(Transform playerPosition, float pushPower)
+    public void PushEnemy(Transform pusherPosition, float pushPower)
     {
-        var currentDirection = transform.position - playerPosition.position;
+        var currentDirection = transform.position - pusherPosition.position;
         ActivateRagdoll();
 
         for (int i = 0; i < _limbs.Length; i++)

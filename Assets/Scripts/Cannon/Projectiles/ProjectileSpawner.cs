@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class ProjectileSpawner : MonoBehaviour
 {
     [SerializeField] private Projectile _projectilePrefab;
+    [SerializeField] private Player _target;
     [SerializeField] private AudioSource _shootSound;
     [SerializeField] private Transform _spawnZone;
     [SerializeField] private Transform _direction;
@@ -29,6 +30,8 @@ public class ProjectileSpawner : MonoBehaviour
             var spawned = Instantiate(_projectilePrefab, _spawnZone.position, Quaternion.Euler(0,0,0));
             _shootSound.Play();
             spawned.SetDirection(_direction.position);
+            spawned.SetTarget(_target);
+
             _isSpawned = true;
         }
     }

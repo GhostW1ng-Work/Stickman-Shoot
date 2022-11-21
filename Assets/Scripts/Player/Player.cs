@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
 
     private Animator _animator;
     private PlayerAttacker _attacker;
+    private Rigidbody _rigidBody;
     private bool _isWin = false;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _attacker = GetComponent<PlayerAttacker>();
+        _rigidBody = GetComponent<Rigidbody>();
     }
 
     private void OnEnable()
@@ -36,5 +38,11 @@ public class Player : MonoBehaviour
             _animator.SetBool("Dance", true);
             _attacker.enabled = false;
         }
+    }
+
+    public void PushPlayer(Transform pusherPosition, float pushPower)
+    {
+        Vector3 currentDirection = (transform.position - pusherPosition.position).normalized;
+        _rigidBody.AddForce(currentDirection  * pushPower, ForceMode.Impulse);
     }
 }
