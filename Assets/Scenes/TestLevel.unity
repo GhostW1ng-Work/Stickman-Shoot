@@ -8058,14 +8058,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 101287320, guid: fc9f7f9b5885def4493cd3d2c5dbed01, type: 3}
-      propertyPath: _audioOn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 101287320, guid: fc9f7f9b5885def4493cd3d2c5dbed01, type: 3}
-      propertyPath: _audioOff
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3011392874715929396, guid: fc9f7f9b5885def4493cd3d2c5dbed01, type: 3}
       propertyPath: m_Name
       value: Sounds
