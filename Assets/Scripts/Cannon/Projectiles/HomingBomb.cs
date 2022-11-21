@@ -5,6 +5,8 @@ public class HomingBomb : Projectile
     [SerializeField] private float _pushPower;
     [SerializeField] private float _timeUntilDestroy;
 
+    private Vector3 _rotation = Vector3.up;
+
     private void Update()
     {
         Shoot();
@@ -27,6 +29,8 @@ public class HomingBomb : Projectile
 
     protected override void Shoot()
     {
+        transform.eulerAngles += _rotation;
+        //transform.LookAt(_player.transform);
         Vector3 direction = (_player.transform.position - transform.position).normalized;
         transform.position += direction * _speed * Time.deltaTime;
     } 
