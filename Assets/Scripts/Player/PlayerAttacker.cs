@@ -55,6 +55,12 @@ public class PlayerAttacker : MonoBehaviour
                 _currentWeapon.Attack(enemy);
             }
         }
+
+        if(other.TryGetComponent(out Boss boss) && _canAttack == true)
+        {
+            StartCoroutine(Attack());
+            boss.TakeDamage(_currentWeapon.Damage);
+        }
     }
 
     private void SetWeapon(Weapon weapon)

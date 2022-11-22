@@ -9,11 +9,13 @@ public class ShowInterstistialAfterEndingLevel : MonoBehaviour
     private void OnEnable()
     {
         _enemyCounter.EnemiesPlucked += ShowInterstitial;
+        Boss.BossDied += ShowInterstitial;
     }
 
     private void OnDisable()
     {
         _enemyCounter.EnemiesPlucked -= ShowInterstitial;
+        Boss.BossDied -= ShowInterstitial;
     }
 
     public void ShowInterstitial()

@@ -16,6 +16,7 @@ public class CannonActivator : MonoBehaviour
 
     private void OnEnable()
     {
+        Boss.BossDied += DeactivateCannonContainer;
         _enemyCounter.EnemiesPlucked += DeactivateCannonContainer;
         _playerChecker.PlayerFalled += DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
@@ -24,6 +25,7 @@ public class CannonActivator : MonoBehaviour
 
     private void OnDisable()
     {
+        Boss.BossDied -= DeactivateCannonContainer;
         _enemyCounter.EnemiesPlucked -= DeactivateCannonContainer;
         _playerChecker.PlayerFalled -= DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed -= ActivateCannonContainer;

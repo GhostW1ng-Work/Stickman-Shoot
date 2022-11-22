@@ -8,10 +8,13 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected Image _weaponImage;
     [SerializeField] protected AudioSource _punchAudio;
     [SerializeField] protected float _pushPower;
+    [SerializeField] protected float _damage;
     [SerializeField] protected float _timeToShutdown;
     [SerializeField] protected string _weaponName;
 
     public string WeaponName => _weaponName;
+    public float Damage => _damage;
+    public float PushPower => _pushPower;
 
     private void OnEnable()
     {

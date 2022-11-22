@@ -16,6 +16,7 @@ public class VictoryPanelShower : MonoBehaviour
 
     private void OnEnable()
     {
+        Boss.BossDied += OnEnemiesPlucked;
         _enemyCounter.EnemiesPlucked += OnEnemiesPlucked;
         _playerChecker.PlayerFalled += OnPlayerFalled;
         _videoAdShower.VideoShowed += OnVideoShowed;
@@ -23,6 +24,7 @@ public class VictoryPanelShower : MonoBehaviour
 
     private void OnDisable()
     {
+        Boss.BossDied -= OnEnemiesPlucked;
         _enemyCounter.EnemiesPlucked -= OnEnemiesPlucked;
         _playerChecker.PlayerFalled -= OnPlayerFalled;
         _videoAdShower.VideoShowed -= OnVideoShowed;

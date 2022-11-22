@@ -15,6 +15,7 @@ public class DefeatPanelShower : MonoBehaviour
         _playerChecker.PlayerFalled += OnPlayerFalled;
         _videoAdShower.VideoShowed += OnVideoAdShowed;
         _enemyCounter.EnemiesPlucked += OnEnemiesPlucked;
+        Boss.BossDied += OnEnemiesPlucked;
 
     }
 
@@ -23,6 +24,7 @@ public class DefeatPanelShower : MonoBehaviour
         _playerChecker.PlayerFalled -= OnPlayerFalled;
         _videoAdShower.VideoShowed -= OnVideoAdShowed;
         _enemyCounter.EnemiesPlucked -= OnEnemiesPlucked;
+        Boss.BossDied -= OnEnemiesPlucked;
     }
 
     private void OnPlayerFalled()

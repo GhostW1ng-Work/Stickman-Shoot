@@ -21,11 +21,13 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         _enemyCounter.EnemiesPlucked += OnEnemiesPlucked;
+        Boss.BossDied += OnEnemiesPlucked;
     }
 
     private void OnDisable()
     {
         _enemyCounter.EnemiesPlucked -= OnEnemiesPlucked;
+        Boss.BossDied -= OnEnemiesPlucked;
     }
 
     private void OnEnemiesPlucked()
