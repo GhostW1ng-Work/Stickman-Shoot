@@ -4,7 +4,8 @@ using Cinemachine;
 public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField] EnemyOnArenaCounter _enemyOnArenaCounter;
-    [SerializeField] private CinemachineVirtualCamera _secondCamera;
+    [SerializeField] private CinemachineVirtualCamera _currentCamera;
+    [SerializeField] private CinemachineVirtualCamera _nextCamera;
 
     private void OnEnable()
     {
@@ -18,6 +19,7 @@ public class CameraSwitcher : MonoBehaviour
 
     private void OnEnemiesOnAreaDied()
     {
-        _secondCamera.Priority = 20;
+        _currentCamera.Priority = 0;
+        _nextCamera.Priority = 10;
     }
 }

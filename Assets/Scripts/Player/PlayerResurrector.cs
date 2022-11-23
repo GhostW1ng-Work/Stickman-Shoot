@@ -9,6 +9,7 @@ public class PlayerResurrector : MonoBehaviour
     [SerializeField] private List<Transform> _spawnPointsTransform;
 
     private Transform _currentSpawnPosition;
+    private int _currentSpawnPositionIndex;
 
     private void OnEnable()
     {
@@ -24,7 +25,8 @@ public class PlayerResurrector : MonoBehaviour
 
     private void Start()
     {
-        _currentSpawnPosition = _spawnPointsTransform[0];
+        _currentSpawnPositionIndex = 0;
+        _currentSpawnPosition = _spawnPointsTransform[_currentSpawnPositionIndex];
     }
 
     private void OnVideoAdShowed()
@@ -36,6 +38,7 @@ public class PlayerResurrector : MonoBehaviour
 
     private void OnTeleportEnded()
     {
-        _currentSpawnPosition = _spawnPointsTransform[1];
+        _currentSpawnPositionIndex++;
+        _currentSpawnPosition = _spawnPointsTransform[_currentSpawnPositionIndex];
     }
 }

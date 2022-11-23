@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class EnemyCounter : MonoBehaviour
 {
-    [SerializeField] private EnemyOnArenaCounter _enemyOnArenaCounter;
+    [SerializeField] private EnemyOnArenaCounter[] _enemyOnArenaCounters;
 
     private int _enemyCount;
     private EnemyChecker[] _enemies;
@@ -28,14 +28,21 @@ public class EnemyCounter : MonoBehaviour
         {
             _enemyCount++;
             enemy.DeactivateParentObject();
-            _enemyOnArenaCounter.CheckEnemy(enemy.ParentObject);
+            foreach (EnemyOnArenaCounter enemyOnArenaCounter in _enemyOnArenaCounters)
+            {
+                enemyOnArenaCounter.CheckEnemy(enemy.ParentObject);
+            }
+            
         }
 
         if(other.TryGetComponent(out EnemyIceCube cube))
         {
             _enemyCount++;
             cube.gameObject.SetActive(false);
-            _enemyOnArenaCounter.CheckEnemy(cube.ParentObject);
+            foreach (EnemyOnArenaCounter enemyOnArenaCounter in _enemyOnArenaCounters)
+            {
+                enemyOnArenaCounter.CheckEnemy(cube.ParentObject);
+            }
         }
     }
 }

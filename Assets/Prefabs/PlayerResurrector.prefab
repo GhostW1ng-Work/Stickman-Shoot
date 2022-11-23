@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoAdShower: {fileID: 0}
+  _ressurectSound: {fileID: 0}
   _player: {fileID: 0}
+  _spawnPointsTransform:
+  - {fileID: 0}
+  - {fileID: 0}

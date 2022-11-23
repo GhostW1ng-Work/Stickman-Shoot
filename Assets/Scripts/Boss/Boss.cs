@@ -12,7 +12,6 @@ public class Boss : MonoBehaviour
 
     private void Die() 
     {
-        Debug.Log("Умер");
         Destroy(gameObject);
         BossRagdoll ragdoll = Instantiate(_ragdoll, transform.position, Quaternion.identity);
         ragdoll.PushRagdoll(_player.transform, _player.CurrentWeapon.PushPower);
