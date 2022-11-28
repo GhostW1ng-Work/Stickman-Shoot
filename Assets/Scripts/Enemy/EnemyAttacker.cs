@@ -16,6 +16,8 @@ public class EnemyAttacker : MonoBehaviour
 
     public Weapon CurrentWeapon => _currentWeapon;
 
+    public static event UnityAction AnyAttacked;
+    public event UnityAction Attacked;
     public event UnityAction WeaponPickedUp;
 
     private void Start()
@@ -36,26 +38,30 @@ public class EnemyAttacker : MonoBehaviour
         if (other.TryGetComponent(out Player player) && _canAttack == true)
         {
             StartCoroutine(Attack());
-            _currentWeapon.Attack(player);
+            _currentWeapon.Attack(transform, player);
+        }
+
+        if (other.TryGetComponent(out Enemy enemy) && _canAttack == true)
+        {
+            StartCoroutine(Attack());
+            _currentWeapon.Attack(transform, enemy);
         }
     }
 
     private void SetWeapon(Weapon weapon)
     {
-        Debug.Log("Взяли");
         foreach (Weapon newWeapon in _weapons)
         {
-            Debug.Log("Лист");
             if(newWeapon.WeaponName == weapon.WeaponName)
             {
-                Debug.Log("Зашли");
                 _currentWeapon.gameObject.SetActive(false);
                 _currentWeapon = newWeapon;
                 newWeapon.gameObject.SetActive(true);
                 _canAttack = true;
-                WeaponPickedUp?.Invoke();
+                
             }
-        } 
+        }
+        WeaponPickedUp?.Invoke();
     }
 
     private IEnumerator Attack()
@@ -63,6 +69,8 @@ public class EnemyAttacker : MonoBehaviour
         _animator.SetBool("BaseballAttack", true);
         yield return new WaitForSeconds(0.01f);
         _animator.SetBool("BaseballAttack", false);
+        AnyAttacked?.Invoke();
+        Attacked?.Invoke();
         SetUnarmed();
     }
 

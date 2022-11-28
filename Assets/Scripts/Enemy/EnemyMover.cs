@@ -8,19 +8,27 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private Animator _animator;
     [SerializeField] private MoveToStartPanelDisabler _moveToStartPanelDisabler;
+    [SerializeField] private EnemyAttacker _enemyAttacker;
+    [SerializeField] private EnemyTargetSetter _targetSetter;
 
     private int _currentPointIndex;
     private int _index;
     private bool _isRunning;
+    private bool _withWeapon = false;
+    private float _baseSpeed = 3.5f;
 
     private void OnEnable()
     {
         _moveToStartPanelDisabler.AnyKeyPressed += OnAnyKeyPressed;
+        _enemyAttacker.WeaponPickedUp += OnWeaponPickedUp;
+        _enemyAttacker.Attacked += OnAttacked;
     }
 
     private void OnDisable()
     {
         _moveToStartPanelDisabler.AnyKeyPressed -= OnAnyKeyPressed;
+        _enemyAttacker.WeaponPickedUp -= OnWeaponPickedUp;
+        _enemyAttacker.Attacked -= OnAttacked;
     }
 
     private void Start()
@@ -38,14 +46,23 @@ public class EnemyMover : MonoBehaviour
         {
             if (_isRunning == true)
             {
-                if (_agent.remainingDistance < _distanceToChangeGoal)
+                if (_withWeapon)
                 {
-                    _index = Random.Range(0, _points.Length);
-                    _currentPointIndex = _index;
+                    _agent.speed = 5f;
+                    _agent.SetDestination(_targetSetter.CurrentTarget.transform.position);
+                }
+                else
+                {
+                    _agent.speed = _baseSpeed;
+                    if (_agent.remainingDistance < _distanceToChangeGoal)
+                    {
+                        _index = Random.Range(0, _points.Length);
+                        _currentPointIndex = _index;
 
-                    _agent.SetDestination(_points[_currentPointIndex].position);
-                    Rotate();
-                    _animator.SetBool("isRunning", true);
+                        _agent.SetDestination(_points[_currentPointIndex].position);
+                        Rotate();
+                        _animator.SetBool("isRunning", true);
+                    }
                 }
             }
             else
@@ -60,6 +77,16 @@ public class EnemyMover : MonoBehaviour
             _agent.enabled = false;
             _isRunning = false;
         }
+    }
+
+    private void OnWeaponPickedUp()
+    {
+        _withWeapon = true;
+    }
+
+    private void OnAttacked()
+    {
+        _withWeapon = false;
     }
 
     private Vector3 Rotate()

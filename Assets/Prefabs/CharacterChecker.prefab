@@ -112,6 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8323491713c6e904285a521d2119e29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyOnArenaCounters: []
+  _enemieTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!54 &5224546353138576152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,6 +145,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c35728dbd14a34f8955bcf6de0ea2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defeatPanel: {fileID: 0}
-  _cannonsContainer: {fileID: 0}
-  _playerText: {fileID: 0}

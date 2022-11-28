@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     public EnemyChecker ParentObject => _parentObject;
 
     public event UnityAction Freezed;
+    public event UnityAction Died;
+    public static event UnityAction AnyDied;
 
     private void Start()
     {
@@ -68,6 +70,8 @@ public class Enemy : MonoBehaviour
 
     public void DeactivateParentObject()
     {
+        Died?.Invoke();
+        AnyDied?.Invoke();
         _parentObject.gameObject.SetActive(false);
     }
 }

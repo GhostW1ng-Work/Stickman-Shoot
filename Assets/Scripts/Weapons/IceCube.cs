@@ -7,7 +7,12 @@ public class IceCube : Weapon
         enemy.Freeze();
     }
 
-    public override void Attack(Player player)
+    public override void Attack(Transform attackEnemy, Enemy enemy)
+    {
+        enemy.Freeze();
+    }
+
+    public override void Attack(Transform enemyTransform, Player player)
     {
         Debug.Log("Заморозило");
     }

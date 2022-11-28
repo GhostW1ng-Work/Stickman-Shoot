@@ -11,8 +11,13 @@ public class BoxGlove : Weapon
         enemy.PushEnemy(_player.transform, _pushPower);
     }
 
-    public override void Attack(Player player)
+    public override void Attack(Transform attackEnemy, Enemy enemy)
     {
-        Debug.Log("Уебало перчаткой");
+        enemy.PushEnemy(attackEnemy, _pushPower);
+    }
+
+    public override void Attack(Transform enemyTransform, Player player)
+    {
+        player.PushPlayer(enemyTransform, _pushPower * 10);
     }
 }

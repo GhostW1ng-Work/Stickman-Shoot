@@ -19,11 +19,13 @@ public abstract class Weapon : MonoBehaviour
     private void OnEnable()
     {
         _player.Attacked += OnAttacked;
+        EnemyAttacker.AnyAttacked += OnAttacked;
     }
 
     private void OnDisable()
     {
         _player.Attacked -= OnAttacked;
+        EnemyAttacker.AnyAttacked -= OnAttacked; 
     }
 
     private void OnAttacked()
@@ -37,7 +39,6 @@ public abstract class Weapon : MonoBehaviour
         yield return new WaitForSeconds(_timeToShutdown);
         _weaponImage.gameObject.SetActive(false);
         gameObject.SetActive(false);
-
     }
 
     public void ShowImage()
@@ -52,6 +53,8 @@ public abstract class Weapon : MonoBehaviour
 
     public abstract void Attack(Enemy enemy);
 
-    public abstract void Attack(Player player);
+    public abstract void Attack(Transform attackEnemy, Enemy enemy);
+
+    public abstract void Attack(Transform enemyTransform, Player player);
 
 }
