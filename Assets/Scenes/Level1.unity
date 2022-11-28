@@ -6237,6 +6237,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008046627
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547993505195884975, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0

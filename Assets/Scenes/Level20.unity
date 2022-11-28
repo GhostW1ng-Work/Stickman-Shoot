@@ -1543,6 +1543,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1666112884}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394953, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _iceCube
       value: 
@@ -1615,6 +1639,38 @@ PrefabInstance:
       propertyPath: _moveToStartPanelDisabler
       value: 
       objectReference: {fileID: 5918943149730986144}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 527881832}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 768307976}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1742,6 +1798,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 246073702}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &246073704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 246073702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250427703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,11 +2390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015389855
+      value: 0.000000015389857
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000007694927
+      value: -0.000000007694929
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3059,6 +3126,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818300257}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000028573033
@@ -3143,6 +3222,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110649
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.002893144
@@ -3267,6 +3358,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000014901161
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1776350433}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8566995513898984657}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3406,6 +3529,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72d1607c28928ab419a608f4c07cf3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &399779644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 399779642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &401489733
@@ -4747,6 +4881,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1666112884}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000028573033
@@ -4831,6 +4977,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110649
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.002893144
@@ -4955,6 +5113,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000014901161
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 246073704}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 768307976}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5086,6 +5276,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 527881830}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &527881832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 527881830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &527881834 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1227774183, guid: 635850da690f0624080f0c4a672c892d, type: 3}
@@ -7563,6 +7764,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2918918015748330852, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
   m_PrefabInstance: {fileID: 752976233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &752976235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1882471246, guid: 0519b615e3c0b1a4985bd1906b408ebe, type: 3}
+  m_PrefabInstance: {fileID: 752976233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &764818235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7715,6 +7927,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1666112884}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000056624526
@@ -7799,6 +8023,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110643
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0028902825
@@ -7939,6 +8175,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008046627
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 246073704}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 527881832}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8074,6 +8342,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 768307974}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &768307976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 768307974}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &770677175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10810,6 +11089,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429782633}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394953, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _iceCube
       value: 
@@ -10882,6 +11185,38 @@ PrefabInstance:
       propertyPath: _moveToStartPanelDisabler
       value: 
       objectReference: {fileID: 5918943149730986144}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1633994218}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 2065094035}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -11020,6 +11355,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 985557965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &985557968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 985557965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &997586176 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1227774183, guid: 635850da690f0624080f0c4a672c892d, type: 3}
@@ -17778,6 +18124,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429782633}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000028573033
@@ -17862,6 +18220,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110649
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.002893144
@@ -17986,6 +18356,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000014901161
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 985557968}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 2065094035}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -18128,6 +18530,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 1633994215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1633994218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 1633994215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648897746
 GameObject:
   m_ObjectHideFlags: 0
@@ -19774,6 +20187,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818300257}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394953, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: _iceCube
       value: 
@@ -19846,6 +20283,38 @@ PrefabInstance:
       propertyPath: _moveToStartPanelDisabler
       value: 
       objectReference: {fileID: 5918943149730986144}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 399779644}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 8566995513898984657}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -19977,6 +20446,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72d1607c28928ab419a608f4c07cf3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1776350433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 1776350431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1781602262
@@ -22593,11 +23073,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015389857
+      value: -0.000000015389855
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007694929
+      value: 0.000000007694927
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23069,6 +23549,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429782633}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000056624526
@@ -23153,6 +23645,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110643
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0028902825
@@ -23293,6 +23797,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008046627
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 985557968}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1633994218}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -23439,6 +23975,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
   m_PrefabInstance: {fileID: 2065094032}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2065094035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 2065094032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2072722127
 GameObject:
   m_ObjectHideFlags: 0
@@ -24991,6 +25538,28 @@ PrefabInstance:
       objectReference: {fileID: 1540889813}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
+--- !u!114 &6360416469333697943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 402996894, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
+  m_PrefabInstance: {fileID: 6360416469333697942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d0b1fc3a15ac24988275c4da43b99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6360416469333697944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6360416469333697949, guid: f855106afe500d7458d0ddb3051cf24c, type: 3}
+  m_PrefabInstance: {fileID: 6360416469333697942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568344704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6581001889441724011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25095,6 +25664,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818300257}
     m_Modifications:
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 115917274, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 332212113, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000056624526
@@ -25179,6 +25760,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.15110643
       objectReference: {fileID: 0}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559127}
+    - target: {fileID: 899893771, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 1064394951, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0028902825
@@ -25319,6 +25912,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008046627
       objectReference: {fileID: 0}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _unarmed
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350435, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 6360416469333697943}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1776350433}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 399779644}
+    - target: {fileID: 1776350439, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6360416469333697944}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 948344222}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _punchAudio
+      value: 
+      objectReference: {fileID: 1774559128}
+    - target: {fileID: 916048755037186462, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: _weaponImage
+      value: 
+      objectReference: {fileID: 752976235}
     - target: {fileID: 988304000004685437, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -25462,5 +26087,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72d1607c28928ab419a608f4c07cf3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8566995513898984657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1776350438, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+  m_PrefabInstance: {fileID: 8566995513898984655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6781ffcd89afc245917062811b462ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
