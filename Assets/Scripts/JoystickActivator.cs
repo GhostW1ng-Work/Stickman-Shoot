@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class JoystickActivator : MonoBehaviour
 {
+    [SerializeField] private Player _player;
     [SerializeField] private VideoAdShower _videoAdShower;
     [SerializeField] private PlayerFaller _playerFaller;
     [SerializeField] private FloatingJoystick _joyStick;
 
     private void OnEnable()
     {
+        _player.AntiFreezed += OnVideoShowed;
+        _player.Freezed += DisableJoystick;
         _videoAdShower.VideoShowed += OnVideoShowed;
         _playerFaller.PlayerFalled += DisableJoystick;
         PlayerToIslandTeleporter.TeleportStarted += DisableJoystick;
@@ -17,6 +20,8 @@ public class JoystickActivator : MonoBehaviour
 
     private void OnDisable()
     {
+        _player.AntiFreezed -= OnVideoShowed;
+        _player.Freezed -= DisableJoystick;
         _videoAdShower.VideoShowed -= OnVideoShowed;
         _playerFaller.PlayerFalled -= DisableJoystick;
         PlayerToIslandTeleporter.TeleportStarted -= DisableJoystick;

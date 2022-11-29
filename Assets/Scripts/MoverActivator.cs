@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MoverActivator : MonoBehaviour
 {
+    [SerializeField] private Player _player;
     [SerializeField] private DesktopMover _desktopMover;
     [SerializeField] private MobileMover _mobileMover;
     [SerializeField] private PlayerFaller _playerFaller;
@@ -12,6 +13,8 @@ public class MoverActivator : MonoBehaviour
 
     private void OnEnable()
     {
+        _player.AntiFreezed += EnableMover;
+        _player.Freezed += DisableMover;
         _playerFaller.PlayerFalled += DisableMover;
         _videoAdShower.VideoShowed += EnableMover;
         PlayerToIslandTeleporter.TeleportEnded += EnableMover;
@@ -19,6 +22,8 @@ public class MoverActivator : MonoBehaviour
 
     private void OnDisable()
     {
+        _player.AntiFreezed -= EnableMover;
+        _player.Freezed -= DisableMover;
         _playerFaller.PlayerFalled -= DisableMover;
         _videoAdShower.VideoShowed -= EnableMover;
         PlayerToIslandTeleporter.TeleportEnded -= EnableMover;

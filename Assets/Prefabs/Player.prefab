@@ -910,6 +910,8 @@ MonoBehaviour:
   _enemyCounter: {fileID: 0}
   _joystick: {fileID: 0}
   _winSound: {fileID: 0}
+  _playerIceCube: {fileID: 0}
+  _timeToAntiFreeze: 3
 --- !u!114 &948344224
 MonoBehaviour:
   m_ObjectHideFlags: 0
