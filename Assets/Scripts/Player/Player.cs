@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         _rigidBody.isKinematic = true;
         _collider.isTrigger = true;
         _playerIceCube.SetActive(true);
-        _playerIceCube.transform.position = transform.position;
+        _playerIceCube.transform.position = new Vector3(transform.position.x,1,transform.position.z);
         transform.SetParent(_playerIceCube.transform);
         transform.localPosition = new Vector3(0, -0.4f, 0);
         StartCoroutine(WaitToAntifreeze());
