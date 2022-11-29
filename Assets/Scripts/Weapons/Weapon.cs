@@ -19,18 +19,23 @@ public abstract class Weapon : MonoBehaviour
     private void OnEnable()
     {
         _player.Attacked += OnAttacked;
-        EnemyAttacker.AnyAttacked += OnAttacked;
+        EnemyAttacker.AnyAttacked += OnAnyAttacked;
     }
 
     private void OnDisable()
     {
         _player.Attacked -= OnAttacked;
-        EnemyAttacker.AnyAttacked -= OnAttacked; 
+        EnemyAttacker.AnyAttacked -= OnAnyAttacked; 
+    }
+
+    private void OnAnyAttacked()
+    {
+        _punchAudio.Play();
     }
 
     private void OnAttacked()
     {
-        _punchAudio.Play();
+       
         StartCoroutine(WeaponSetActive());
     }
 
