@@ -55,11 +55,6 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(_timeToAntiFreeze);
         AntiFreezed?.Invoke();
-        AntiFreeze();
-    }
-
-    private void AntiFreeze()
-    {
         transform.parent = null;
         _playerIceCube.SetActive(false);
         _collider.isTrigger = false;
