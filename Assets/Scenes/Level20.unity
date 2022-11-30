@@ -2453,11 +2453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015389857
+      value: -0.000000015389855
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000007694929
+      value: 0.000000007694927
       objectReference: {fileID: 0}
     - target: {fileID: 4292326058125066516, guid: ab4d9fbeb35b7ec40a8243c77515ef5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7219,6 +7219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &696427372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 702990609400713903, guid: 630171c54685733498480b62feaa47eb, type: 3}
+  m_PrefabInstance: {fileID: 696427370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &700944667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17267,6 +17272,10 @@ PrefabInstance:
       propertyPath: _levelCounterText
       value: 
       objectReference: {fileID: 696427371}
+    - target: {fileID: 439146076724748965, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _levelCounterTextGameObject
+      value: 
+      objectReference: {fileID: 696427372}
     - target: {fileID: 3192638958758784765, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
       propertyPath: _joystick
       value: 

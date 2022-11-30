@@ -5450,6 +5450,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1386073821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 702990609400713903, guid: 630171c54685733498480b62feaa47eb, type: 3}
+  m_PrefabInstance: {fileID: 1386073819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437906544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,6 +5767,10 @@ PrefabInstance:
       propertyPath: _levelCounterText
       value: 
       objectReference: {fileID: 1386073820}
+    - target: {fileID: 439146076724748965, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
+      propertyPath: _levelCounterTextGameObject
+      value: 
+      objectReference: {fileID: 1386073821}
     - target: {fileID: 3192638958758784765, guid: cbea3f7443e432c41bd6abbf5f54124c, type: 3}
       propertyPath: _joystick
       value: 
