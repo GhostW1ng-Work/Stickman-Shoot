@@ -5,6 +5,7 @@ public class SoundMuter : MonoBehaviour
 {
     [SerializeField] private Sprite _audioOn;
     [SerializeField] private Sprite _audioOff;
+    [SerializeField] private VideoAdShower _videoAdShower;
 
     private Image _currentImage;
     private Button _button;
@@ -17,11 +18,15 @@ public class SoundMuter : MonoBehaviour
 
     private void OnEnable()
     {
+        _videoAdShower.VideoShowed += OnVideoShowed;
+        _videoAdShower.VideoClosed += OnVideoClosed;
         _button.onClick.AddListener(TryMuteAudio);
     }
 
     private void OnDisable()
     {
+        _videoAdShower.VideoShowed -= OnVideoShowed;
+        _videoAdShower.VideoClosed -= OnVideoClosed;
         _button.onClick.RemoveListener(TryMuteAudio);
     }
 
@@ -36,6 +41,30 @@ public class SoundMuter : MonoBehaviour
         else if(PlayerPrefs.GetInt("IsSoundOn", _isAudioOnInt) == 1)
         {
             UnmuteAudio();
+        }
+    }
+
+    private void OnVideoShowed()
+    {
+        if (_isAudioOnInt == 0)
+        {
+            return;
+        }
+        else if(_isAudioOnInt == 1)
+        {
+            AudioListener.volume = 0;
+        }
+    }
+
+    private void OnVideoClosed()
+    {
+        if(_isAudioOnInt == 0)
+        {
+            return;
+        }
+        else if (_isAudioOnInt == 1)
+        {
+            AudioListener.volume = 1;
         }
     }
 

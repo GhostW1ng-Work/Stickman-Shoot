@@ -8099,6 +8099,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1540889812}
     m_Modifications:
+    - target: {fileID: 230702969, guid: 3bd70475138cb46488151b4ae7994ba2, type: 3}
+      propertyPath: _videoAdShower
+      value: 
+      objectReference: {fileID: 1540889814}
     - target: {fileID: 1608909144088813698, guid: 3bd70475138cb46488151b4ae7994ba2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
