@@ -19,6 +19,7 @@ public class PlayerAttacker : MonoBehaviour
 
     public event UnityAction Attacked;
     public event UnityAction WeaponPickedUp;
+    public static event UnityAction AnyAttacked;
 
     private void OnEnable()
     {
@@ -86,6 +87,7 @@ public class PlayerAttacker : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         _animator.SetBool("BaseballAttack", false);
         Attacked?.Invoke();
+        AnyAttacked?.Invoke();
         SetUnarmed();
     }
 

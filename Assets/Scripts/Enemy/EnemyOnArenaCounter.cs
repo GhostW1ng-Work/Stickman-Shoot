@@ -9,6 +9,7 @@ public class EnemyOnArenaCounter : MonoBehaviour
     private int _enemyCount = 0;
 
     public event UnityAction EnemiesOnArenaDied;
+    public static event UnityAction EnemiesOnAnyArenaDied;
 
     public void CheckEnemy(EnemyChecker enemy)
     {
@@ -18,6 +19,7 @@ public class EnemyOnArenaCounter : MonoBehaviour
             if(_enemyCount >= _enemiesOnArena.Count)
             {
                 EnemiesOnArenaDied?.Invoke();
+                EnemiesOnAnyArenaDied?.Invoke();
             }
         }
     }

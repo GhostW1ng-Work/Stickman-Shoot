@@ -19,6 +19,7 @@ public class EnemyMover : MonoBehaviour
 
     private void OnEnable()
     {
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent += OnInBackgroundChange;
         _moveToStartPanelDisabler.AnyKeyPressed += OnAnyKeyPressed;
         _enemyAttacker.WeaponPickedUp += OnWeaponPickedUp;
         _enemyAttacker.Attacked += OnAttacked;
@@ -26,6 +27,7 @@ public class EnemyMover : MonoBehaviour
 
     private void OnDisable()
     {
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent -= OnInBackgroundChange;
         _moveToStartPanelDisabler.AnyKeyPressed -= OnAnyKeyPressed;
         _enemyAttacker.WeaponPickedUp -= OnWeaponPickedUp;
         _enemyAttacker.Attacked -= OnAttacked;
@@ -40,12 +42,13 @@ public class EnemyMover : MonoBehaviour
 
     private void Update()
     {
-        _agent.enabled = true;
-
+    
         if(_points.Length != 0)
         {
+            
             if (_isRunning == true)
             {
+                _agent.enabled = true;
                 if (_withWeapon)
                 {
                     _agent.speed = 5f;
@@ -76,7 +79,12 @@ public class EnemyMover : MonoBehaviour
             _agent.isStopped = true;
             _agent.enabled = false;
             _isRunning = false;
-        }
+        }  
+    }
+
+    private void OnInBackgroundChange(bool inBackground)
+    {
+        _isRunning = !inBackground;
     }
 
     private void OnWeaponPickedUp()

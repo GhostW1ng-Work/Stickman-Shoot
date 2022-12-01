@@ -18,7 +18,7 @@ public class CannonSwitcher : MonoBehaviour
 
     private void OnEnemiesOnArenaDied()
     {
-        _cannonFirstIsland.gameObject.SetActive(false);
+        _cannonFirstIsland.SetIsActive(false);
         _cannonSecondIsland.SetIsActive(true);
     }
 }

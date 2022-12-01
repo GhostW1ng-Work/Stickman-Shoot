@@ -3,6 +3,7 @@ using UnityEngine;
 public class CannonActivator : MonoBehaviour
 {
     [SerializeField] private PlayerChecker _playerChecker;
+    [SerializeField] private int _cannonsNumber;
     [SerializeField] private VideoAdShower _videoAdShower;
     [SerializeField] private MoveToStartPanelDisabler _moveToStartPanelDisabler;
     [SerializeField] private Timer _timer;
@@ -11,12 +12,11 @@ public class CannonActivator : MonoBehaviour
     [SerializeField] private GameObject[] _cannons;
     [SerializeField] private bool _isActive = true;
 
-
     private int _cannonIndex;
 
     private void OnEnable()
     {
-        Boss.BossDied += DeactivateCannonContainer;
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent += OnInBackgroundChange;
         _enemyCounter.EnemiesPlucked += DeactivateCannonContainer;
         _playerChecker.PlayerFalled += DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed += ActivateCannonContainer;
@@ -25,7 +25,7 @@ public class CannonActivator : MonoBehaviour
 
     private void OnDisable()
     {
-        Boss.BossDied -= DeactivateCannonContainer;
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent -= OnInBackgroundChange;
         _enemyCounter.EnemiesPlucked -= DeactivateCannonContainer;
         _playerChecker.PlayerFalled -= DeactivateCannonContainer;
         _moveToStartPanelDisabler.AnyKeyPressed -= ActivateCannonContainer;
@@ -57,6 +57,14 @@ public class CannonActivator : MonoBehaviour
                 _timer.ResetTimer();
             }
         }
+    }
+
+    private void OnInBackgroundChange(bool inBackground)
+    {
+        if (ArenaCount.Instance.CurrentArenaCount == _cannonsNumber)
+            SetIsActive(!inBackground);
+        else
+            SetIsActive(false);
     }
 
     private void ActivateCannonContainer()

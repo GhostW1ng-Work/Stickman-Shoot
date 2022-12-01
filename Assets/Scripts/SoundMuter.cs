@@ -18,6 +18,7 @@ public class SoundMuter : MonoBehaviour
 
     private void OnEnable()
     {
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent += OnBackgroundChange;
         _videoAdShower.VideoShowed += OnVideoShowed;
         _videoAdShower.VideoClosed += OnVideoClosed;
         _button.onClick.AddListener(TryMuteAudio);
@@ -25,6 +26,7 @@ public class SoundMuter : MonoBehaviour
 
     private void OnDisable()
     {
+        Agava.WebUtility.WebApplication.InBackgroundChangeEvent -= OnBackgroundChange;
         _videoAdShower.VideoShowed -= OnVideoShowed;
         _videoAdShower.VideoClosed -= OnVideoClosed;
         _button.onClick.RemoveListener(TryMuteAudio);
@@ -41,6 +43,19 @@ public class SoundMuter : MonoBehaviour
         else if(PlayerPrefs.GetInt("IsSoundOn", _isAudioOnInt) == 1)
         {
             UnmuteAudio();
+        }
+    }
+
+    private void OnBackgroundChange(bool inBackground) 
+    {
+        AudioListener.pause = inBackground;
+        if (_isAudioOnInt == 0)
+        {
+            AudioListener.volume = 0;
+        }
+        else if(_isAudioOnInt == 1)
+        {
+            AudioListener.volume = 1;
         }
     }
 

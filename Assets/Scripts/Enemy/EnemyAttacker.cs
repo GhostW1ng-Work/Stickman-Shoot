@@ -70,7 +70,6 @@ public class EnemyAttacker : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         _animator.SetBool("BaseballAttack", false);
         AnyAttacked?.Invoke();
-        Attacked?.Invoke();
         SetUnarmed();
     }
 
