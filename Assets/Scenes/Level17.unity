@@ -3993,6 +3993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerChecker: {fileID: 1868615820}
+  _cannonsNumber: 0
   _videoAdShower: {fileID: 1540889814}
   _moveToStartPanelDisabler: {fileID: 5918943149730986144}
   _timer: {fileID: 1227083509}
@@ -75058,6 +75059,10 @@ PrefabInstance:
       propertyPath: _cannonsContainer
       value: 
       objectReference: {fileID: 686334473}
+    - target: {fileID: 5224546353138576156, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5224546353138576158, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -75068,7 +75073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5224546353138576158, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8000011
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5224546353138576158, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
       propertyPath: m_LocalPosition.z

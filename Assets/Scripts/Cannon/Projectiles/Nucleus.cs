@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Nucleus : Projectile
 {
+    [SerializeField] private float _pushPower;
+
     private void Update()
     {
         Shoot();

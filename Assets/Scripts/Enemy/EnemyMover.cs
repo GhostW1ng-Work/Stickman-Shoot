@@ -45,7 +45,6 @@ public class EnemyMover : MonoBehaviour
     
         if(_points.Length != 0)
         {
-            
             if (_isRunning == true)
             {
                 _agent.enabled = true;

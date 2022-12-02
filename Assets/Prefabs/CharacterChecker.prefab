@@ -112,9 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8323491713c6e904285a521d2119e29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyOnArenaCounters: []
-  _enemieTargets:
-  - {fileID: 0}
+  _enemyOnArenaCounters:
   - {fileID: 0}
   - {fileID: 0}
 --- !u!54 &5224546353138576152

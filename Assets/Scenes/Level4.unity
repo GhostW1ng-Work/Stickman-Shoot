@@ -2457,6 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerChecker: {fileID: 1867898383}
+  _cannonsNumber: 0
   _videoAdShower: {fileID: 1005347928}
   _moveToStartPanelDisabler: {fileID: 1790892210}
   _timer: {fileID: 1227083509}
@@ -6464,7 +6465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5224546353138576158, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8000011
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 5224546353138576158, guid: bc30dfcdd8f2ab146b633c342e05d97a, type: 3}
       propertyPath: m_LocalPosition.z
