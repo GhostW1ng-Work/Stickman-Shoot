@@ -74,6 +74,6 @@ public class Enemy : MonoBehaviour
         Died?.Invoke();
         AnyDied?.Invoke();
         _skinnedMeshRenderer.enabled = false;
-        _parentObject.gameObject.SetActive(false);
+        //_parentObject.gameObject.SetActive(false);
     }
 }

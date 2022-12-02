@@ -2038,30 +2038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762a48b0d73129c409d6268d160dc17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _points: []
   _distanceToChangeGoal: 0.5
   _agent: {fileID: 7332488883183275126}
   _animator: {fileID: 7332488883175866329}
@@ -2409,10 +2386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364f07a7403c77143add0cb26e424c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _enemies: []
 --- !u!1 &7332488883183275129
 GameObject:
   m_ObjectHideFlags: 0
