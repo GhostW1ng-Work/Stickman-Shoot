@@ -6858,9 +6858,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1209684221}
     - target: {fileID: 7332488883180093721, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7332488883180093721, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 92070edc392a8374da6308e2ca3bbfe5, type: 2}
+    - target: {fileID: 7332488883183275125, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7332488883183275126, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6868,6 +6876,10 @@ PrefabInstance:
     - target: {fileID: 7332488883183275127, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_Name
       value: EnemyOrange
+      objectReference: {fileID: 0}
+    - target: {fileID: 7332488883183275133, guid: 635850da690f0624080f0c4a672c892d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7332488883183308821, guid: 635850da690f0624080f0c4a672c892d, type: 3}
       propertyPath: m_RootOrder

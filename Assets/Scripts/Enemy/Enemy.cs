@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyIceCube _iceCube;
+    [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
     [SerializeField] private ParticleSystem[] _particles;
     [SerializeField] private float _timeToActivate;
     [SerializeField] private EnemyChecker _parentObject;
@@ -72,6 +73,7 @@ public class Enemy : MonoBehaviour
     {
         Died?.Invoke();
         AnyDied?.Invoke();
+        _skinnedMeshRenderer.enabled = false;
         _parentObject.gameObject.SetActive(false);
     }
 }
