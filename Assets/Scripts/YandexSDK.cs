@@ -32,6 +32,19 @@ public class YandexSDK : MonoBehaviour
             _virtualCamera.m_Lens.FieldOfView = _fieldOfViewMobile;
             _desktopMover.enabled = false;
         }
+
+        switch (YandexGamesSdk.Environment.i18n.lang)
+        {
+            case "ru":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("Russian");
+                break;
+            case "en":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("English");
+                break;
+            case "tr":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("Turkish");
+                break;
+        }
 #else
         yield break;
 #endif
