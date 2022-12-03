@@ -2019,6 +2019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _iceCube: {fileID: 0}
+  _enemyAttacker: {fileID: 1776350435}
   _skinnedMeshRenderer: {fileID: 7332488883180093721}
   _particles:
   - {fileID: 6661261027050291217}

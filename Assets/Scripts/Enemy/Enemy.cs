@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyIceCube _iceCube;
+    [SerializeField] private EnemyAttacker _enemyAttacker;
     [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
     [SerializeField] private ParticleSystem[] _particles;
     [SerializeField] private float _timeToActivate;
@@ -50,12 +51,12 @@ public class Enemy : MonoBehaviour
 
     public void PushEnemy(Transform playerPosition, float pushPower)
     {
+        _isAttacked = true;
         foreach (var particle in _particles)
         {
             particle.gameObject.SetActive(true);
         }
 
-        _isAttacked = true;
         _ragdoll.PushEnemy(playerPosition, pushPower);
         _mover.SetIsRunningFalse();
         StartCoroutine(ActivateTimeToRise(_timeToActivate));
@@ -75,5 +76,10 @@ public class Enemy : MonoBehaviour
         AnyDied?.Invoke();
         _skinnedMeshRenderer.enabled = false;
         //_parentObject.gameObject.SetActive(false);
+    }
+
+    public int GetEnemyAttackerCollisionCount()
+    {
+        return _enemyAttacker.CollisionCount;
     }
 }

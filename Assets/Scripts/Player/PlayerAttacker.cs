@@ -14,8 +14,11 @@ public class PlayerAttacker : MonoBehaviour
     private PlayerAnimatorSwitcher _switcher;
     private Animator _animator;
     private bool _canAttack;
+    private int _collisionCount;
+
 
     public Weapon CurrentWeapon => _currentWeapon;
+    public int CollisionCount => _collisionCount;
 
     public event UnityAction Attacked;
     public event UnityAction WeaponPickedUp;
@@ -50,8 +53,9 @@ public class PlayerAttacker : MonoBehaviour
 
         if (other.TryGetComponent(out Enemy enemy) && _canAttack == true)
         {
-            if (enemy.IsAttacked == false)
+            if (enemy.IsAttacked == false && enemy.GetEnemyAttackerCollisionCount() < 1)
             {
+                _collisionCount++;
                 StartCoroutine(Attack());
                 _currentWeapon.Attack(enemy);
             }
@@ -89,6 +93,7 @@ public class PlayerAttacker : MonoBehaviour
         Attacked?.Invoke();
         AnyAttacked?.Invoke();
         SetUnarmed();
+        _collisionCount--;
     }
 
     private void SetUnarmed()

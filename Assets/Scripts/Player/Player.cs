@@ -78,4 +78,9 @@ public class Player : MonoBehaviour
         StartCoroutine(WaitToAntifreeze());
         Freezed?.Invoke();
     }
+
+    public int GetPlayerAttackerCollisionCount()
+    {
+        return _attacker.CollisionCount;
+    }
 }
